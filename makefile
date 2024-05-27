@@ -2,8 +2,8 @@
 
 all: zimolzak-data-quality-2024-05.pdf zimolzak-data-quality-2024-05.pptx
 
-%.pdf: %.txt
+%.pdf: %.md
 	pandoc -t beamer $< -o $@
 
-%.pptx: %.txt
+%.pptx: %.md
 	pandoc $< -o $@
