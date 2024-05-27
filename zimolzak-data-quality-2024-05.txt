@@ -29,8 +29,6 @@ What is *Clinical research informatics?*
 
 ## A detailed reference about secondary use[^MIT]
 
-![](book.jpg){ height=75% }
-
 [^MIT]: MIT Critical Data. *Secondary Analysis of Electronic Health Records.*
 Springer Cham, 2016. [Click for free access](https://link.springer.com/book/10.1007/978-3-319-43742-2)
 
@@ -72,8 +70,6 @@ Potential Implications for Future Coverage Expansions. *Med Care.*
 
 ## Results: After Medicaid expansion, \ldots
 
-![](patrick1.png){ height=40% }
-
 - Dual enrollment *increases.*
 - VA share of hospital admits *decreases* (2--5 % points), and ER visits *decrease* (5--12 % points)
 - Total hospital admits increase or equal, and ER visits + or - or =.
@@ -114,15 +110,6 @@ Delayed dispensing (definition):
     - Exposure: Change in Minnesota law, July 2019 (30-day limit)
     - Endpoint: % of delayed opioid dispensing
 
-
-## Results: effect of change in policy
-
-![Minnesota $0.55 \to 0.13$%, *vs.* controls $1.12 \to 0.97$](kao-graph.jpg){ height=75% }
-
-
-## Results (descriptive)
-
-![Distribution of state laws (Schedule II drugs)](ChuaHisto.png){ height=50% }
 
 ### Bottom line
 
