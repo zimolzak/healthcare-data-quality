@@ -32,7 +32,7 @@ What is *Clinical research informatics?*
 [^MIT]: MIT Critical Data. *Secondary Analysis of Electronic Health Records.*
 Springer Cham, 2016. [Click for free access](https://link.springer.com/book/10.1007/978-3-319-43742-2)
 
-
+Insert jpeg here FIXME
 
 
 # 1: Medicaid expansion[^pom]
