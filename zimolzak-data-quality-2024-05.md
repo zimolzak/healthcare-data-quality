@@ -35,16 +35,15 @@ Springer Cham, 2016. [Click for **free** access!](https://link.springer.com/book
 ![](book.jpg){ height=75% }
 
 
-
 ## Layers of data quality (where things can go wrong)
 
 From "little picture" to big picture:
 
 1. Data itself (contents) is flawed
-    - occasional errors, typos, *etc.*
+    - occasional errors, typos, misunderstandings, *etc.*
     - low fidelity extraction
     - missing or highly missing
-    - rampant errors or "near-lies"
+    - rampant errors or "practically lies"
 2. Data need to be turned into *analytic dataset* (more later)
 3. Data exist but are called 130 different things.
 4. Data are called misleading things (names don't mean what clinicians think)
@@ -64,52 +63,83 @@ It's not "throwing away outliers."
 
 
 
+
 # When data contain errors
 
-## Simple errors
+## Simple errors (what many people think "data cleaning" is)
 
 ::: columns
-
 :::: column
-
-![](72cm.jpg)
-
+![Plausible length for 6--13 month-old, not a retired veteran](72cm.jpg)
 ::::
-
 :::: column
-
-![BMI = 4484](5-9inch.jpg)
-
+![Are you sure you want to correct the BMI = 4484?](5-9inch.jpg)
 ::::
-
 :::
 
 
-## Statistical MVP
+## General references
+
+- some authors say 5 domains:  completeness, correctness, concordance, plausibility, and currency[^weis]
+
+- lit review[^lit]
+
+
+## $3 \times 3$ Matrix[^three]
+
+FIXME insert image
+
+
+## Statistical MVP[^mvp]
+
+- Prior work tries to "detect the implausible numbers using prespecified thresholds\ldots."
+
+- domains: conformance, completeness, and plausibility
+
+
+[^three]: Weiskopf NG, Bakken S, Hripcsak G, Weng C. A Data Quality
+Assessment Guideline for Electronic Health Record Data Reuse. *EGEMS
+(Wash DC).* 2017;5(1):14. [PMID: 29881734](https://pubmed.ncbi.nlm.nih.gov/29881734/)
+
+[^lit]: Liaw ST, Guo JGN, Ansari S, et al. Quality assessment of real-world data repositories across the data life cycle: A literature review. *J Am Med Inform Assoc.* 2021;28(7):1591--1599. [PMID: 33496785](https://pubmed.ncbi.nlm.nih.gov/33496785/)
+
+[^weis]: Weiskopf NG, Weng C. Methods and dimensions of electronic health record data quality assessment: enabling reuse for clinical research. *J Am Med Inform Assoc.* 2013;20(1):141--151. [PMID: 22733976](https://pubmed.ncbi.nlm.nih.gov/22733976/)
+
+[^mvp]: Wang H, Belitskaya-Levy I, Wu F, *et al.* A statistical quality
+assessment method for longitudinal observations in electronic health
+record data with an application to the VA million veteran program.
+*BMC Med Inform Decis Mak.* 2021;21(1):289. [PMID: 34670548](https://pubmed.ncbi.nlm.nih.gov/34670548/)
+
 
 ## Statistical mini-Sentinel
+
+FIXME
+
 
 ## More approaches
 
 refs from MM et al
+
 
 ## Missing data
 
 - under-recognized
 - potentially massive threat to validity
 - there is no one right way, but several wrong ways
-- usually "not my department" and detailed methods out of scope
+- usually "not my department," and detailed methods are out of scope.
 - "patient goes out of network" is another form of it
+
 
 ## Fidelity
 
-Epic rich text issue
+![](epic-note.png)
+
+FIXME crop
+
+
+## Fidelity
 
 Matheny example of dates etc UTC
-
-## Rich text
-
-![](epic-note.png)
 
 
 ## Rampant errors
@@ -133,11 +163,20 @@ analytic dataset:
 
 Also known as "tidy."
 
+Also known as "wide."
+
+
+## What EHRs are really like
+
+FIXME table names
+
+
 ## What to do with time series
 
 many approaches.
 
 what about derived things (BMI)
+
 
 
 
@@ -154,6 +193,7 @@ what about derived things (BMI)
 
 
 
+
 # Extracting data from free text & beyond
 
 ## "Let's just do\ldots"
@@ -163,7 +203,11 @@ information, just like "structured" data.
 
 Transcription errors. "Intrathecal DepoCyt" $\to$ "intrathecal etoposide"
 
+
 ## Ryu et al. auto extraction
+
+FIXME
+
 
 ## Harder than people think
 
@@ -191,13 +235,31 @@ That is *just* to score images on "referable" diabetic retinopathy. No other fea
 [^gulshan]: Gulshan *et al. JAMA* 2016.
 
 
-
 ## When data aren't in there
 
 - just taking the medication
 - income. don't assume ZIP does it for you.
 
 
+
+
+# Conclusions
+
+## Reusing EHR data is not what you may think\ldots
+
+- Data are entered in "funny ways."
+    - Well-meaning people enter the wrong number.
+    - People "just click through" because they're busy.
+    - It's surprisingly hard to "prove" the numbers are wrong.
+    - Medical testing is *extremely* non-random!
+- Just because the table is named `procedures` doesn't mean\ldots
+- "Reshaping" data is a lot of work.
+- The data may be "in there" but hard to get.
+- The data may not be "in there" at all (system was not designed for it).
+
+\ldots and yet, people manage to use EHR data for research!
+
+### If you never tried swimming, don't jump in the deep end without a lifeguard.
 
 
 ## Thank you!
