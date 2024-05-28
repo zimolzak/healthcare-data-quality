@@ -35,40 +35,9 @@ Springer Cham, 2016. [Click for free access](https://link.springer.com/book/10.1
 Insert jpeg here FIXME
 
 
-# 1: Medicaid expansion[^pom]
-
-[^pom]: O'Mahen PN, Petersen LA. Effects of State-level Medicaid Expansion on
-Veterans Health Administration Dual Enrollment and Utilization:
-Potential Implications for Future Coverage Expansions. *Med Care.*
-2020;58(6):526--533. [PMID 32205790](https://pubmed.ncbi.nlm.nih.gov/32205790/)
 
 
-## Methods
 
-### Data
-
-- EHR plus Medicaid Analytic eXtract
-- VA & Medicaid, 1999--2006
-- States: {NY+, PA-}, {AZ+, NM-, NV-}.
-- Pre-analysis definitions of: dual enrollment, calendar days with visits, "disease burden," income(?)
-
-### Analytic
-
-- Difference-in-difference analysis
-- Exposure: Medicaid expansion (NY and AZ in 2001)
-- Endpoints: dual enrollment, hospital admissions (per capita), ED visits (per capita)
-
-
-## Results: After Medicaid expansion, \ldots
-
-- Dual enrollment *increases.*
-- VA share of hospital admits *decreases* (2--5 % points), and ER visits *decrease* (5--12 % points)
-- Total hospital admits increase or equal, and ER visits + or - or =.
-
-### Bottom line
-
-Great example of a study that measured the **effect of a policy** on
-several outcome variables derived from the EHR.
 
 
 
@@ -82,5 +51,3 @@ several outcome variables derived from the EHR.
 - Source for this talk--- FIXME url in brackets
 
 - This work © 2024 by Andrew Zimolzak is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-
-- Cite using doi: FIXME doi
