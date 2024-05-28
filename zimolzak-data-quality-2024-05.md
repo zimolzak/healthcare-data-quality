@@ -32,7 +32,114 @@ What is *Clinical research informatics?*
 [^MIT]: MIT Critical Data. *Secondary Analysis of Electronic Health Records.*
 Springer Cham, 2016. [Click for free access](https://link.springer.com/book/10.1007/978-3-319-43742-2)
 
-Insert jpeg here FIXME
+![](book.jpg){ height=75% }
+
+
+
+## Layers of data quality (where things can go wrong)
+
+From "little picture" to big picture:
+
+1. Data itself (contents) is flawed
+    - occasional errors, typos, *etc.*
+    - missing or highly missing
+    - rampant errors or "near-lies"
+2. Data need to be turned into *analytic dataset* (more later)
+3. Data exist but are called 130 different things.
+4. Data are called misleading things (names don't mean what clinicians think)
+5. Data can be auto-extracted but we must build that pipeline.
+6. Data exist but need human judgment to extract.
+7. Data you want aren't in here at all.
+
+
+## What "data cleaning" means
+
+If someone says "data cleaning," I recommend *having them explain* what they mean!
+
+It's not "just filtering out obvious errors" like height = 6.1 inches.
+
+It's not "throwing away outliers."
+
+
+
+# Contents of each field
+
+## Statistical MVP
+
+## Statistical mini-Sentinel
+
+## missing data
+
+- under-recognized
+- potentially massive threat to validity
+- there is no one right way, but several wrong ways
+- usually "not my department" and detailed methods out of scope
+- "patient goes out of network" is another form of it
+
+## Rampant errors
+
+> If you don't understand the data generation process, you're gonna miss stuff.
+
+---David Adams, PhD (Sr.\ software engineer at Verily). "Machine
+Learning Isn’t Magic." HMS clinical informatics lecture series,
+2018-04-24.
+
+
+
+
+
+# analytic dataset
+
+## definition
+
+analytic dataset:
+: insert definition here
+
+Also known as "tidy."
+
+## what to do with time series
+
+many approaches.
+
+
+
+# integration
+
+## Fillmore *et al.* lab data integration
+
+
+# naming
+
+
+
+# extraction from text & beyond
+
+
+## Ryu et al. auto extraction
+
+## harder than people think
+
+Labeling data is *expensive!* How did Google/Verily train a convolutional neuroal net to interpret retinal fundus photographs?
+
+![](labeling.png)
+
+$(3 \ldots 7) \times 128,000 + 8 \times 9963 + 7 \times 1748 =$
+
+- 476,000 to 989,000 retinal imaging reads[^gulshan]
+- A random article I found[^ijta] says 44 reads / hour
+- 11k to 22k person-hours
+- 5--11 *working years*
+- 1.4--2.8 **million dollars!** (Before you do any computing at all)
+
+That is *just* to score images on "referable" diabetic retinopathy. No other features of retina whatsoever.
+
+[^ijta]: Kolomeyer *et al. International Journal of Telemedicine and Applications* 2012.
+
+[^gulshan]: Gulshan *et al. JAMA* 2016.
+
+
+
+## when data aren't in there
 
 
 
