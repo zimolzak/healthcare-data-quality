@@ -30,7 +30,7 @@ What is *Clinical research informatics?*
 ## A detailed reference about secondary use[^MIT]
 
 [^MIT]: MIT Critical Data. *Secondary Analysis of Electronic Health Records.*
-Springer Cham, 2016. [Click for free access](https://link.springer.com/book/10.1007/978-3-319-43742-2)
+Springer Cham, 2016. [Click for **free** access!](https://link.springer.com/book/10.1007/978-3-319-43742-2)
 
 ![](book.jpg){ height=75% }
 
@@ -78,7 +78,7 @@ It's not "throwing away outliers."
 
 :::: column
 
-![](5-9inch.jpg)
+![BMI = 4484](5-9inch.jpg)
 
 ::::
 
@@ -203,6 +203,6 @@ That is *just* to score images on "referable" diabetic retinopathy. No other fea
 
 - zimolzak@bcm.edu
 
-- Source for this talk--- <https://github.com/zimolzak/healthcare-data-quality>
+- Source for this talk (make corrections/suggestions)--- <https://github.com/zimolzak/healthcare-data-quality>
 
-- This work © 2024 by Andrew Zimolzak is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- This work © 2024 by Andrew Zimolzak is licensed under CC BY-NC-SA 4.0, [click for license details](https://creativecommons.org/licenses/by-nc-sa/4.0/)
