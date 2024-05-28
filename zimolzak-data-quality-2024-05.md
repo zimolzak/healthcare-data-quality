@@ -107,6 +107,9 @@ Epic rich text issue
 
 Matheny example of dates etc UTC
 
+## Rich text
+
+![](epic-note.png)
 
 
 ## Rampant errors
