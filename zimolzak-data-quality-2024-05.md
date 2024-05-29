@@ -45,12 +45,11 @@ From "little picture" to big picture:
     - missing or highly missing
     - rampant errors or "practically lies"
 2. Data exist but are called 130 different things.
-3. Data fields called misleading things (names don't mean what clinicians think)
-4. Data need to be turned into *analytic dataset* (more later)
-5. Data exist only in "free text"
+3. Data fields are called misleading things (names don't mean what clinicians think)
+4. Data exist only in "free text"
     - Data can be auto-extracted but we must build that pipeline.
     - Data exist but need human judgment to extract.
-6. Data you want aren't in here at all.
+5. Data you want aren't in here at all.
 
 
 ## What "data cleaning" means
@@ -78,11 +77,11 @@ It's not "throwing away outliers."
 :::
 
 
-## General references
+## Data quality frameworks: General references
 
 Some authors[^weis] say five domains: completeness, correctness,
-concordance, plausibility, and currency. Several literature
-reviews,[^lit]
+concordance, plausibility, and currency. There are several literature
+reviews.[^lit]
 
 [^lit]: Liaw ST, Guo JGN, Ansari S, *et al.* Quality assessment of real-world data repositories across the data life cycle: A literature review. *J Am Med Inform Assoc.* 2021;28(7):1591--1599. [PMID: 33496785](https://pubmed.ncbi.nlm.nih.gov/33496785/)
 
@@ -91,9 +90,9 @@ reviews,[^lit]
 
 ## Most recent systematic review
 
-the most recent of which[^seven] says 7 domains.
-However, no "standard approach for assessing EHR data quality", so
-"Guidelines are needed for EHR data quality assessment\ldots."
+The most recent systematic review[^seven] says 7 domains.
+However, the authors observe that there is no "standard approach for assessing EHR data quality", so
+"guidelines are needed for EHR data quality assessment\ldots."
 
 - completeness, followed by
 - correctness,
@@ -108,9 +107,9 @@ However, no "standard approach for assessing EHR data quality", so
 
 ## More approaches
 
-Three categories in 2016: conformance, completeness,
-plausibility.[^kahn] And five from 2018: accuracy, completeness,
-consistency, credibility, and timeliness.[^feder] Also straightforward list of "Approaches for quality appraisal:"
+Three categories of data quality described in a 2016 paper: conformance, completeness,
+plausibility.[^kahn] And five categories in a 2018 paper: accuracy, completeness,
+consistency, credibility, and timeliness.[^feder] The latter paper also describes a straightforward list of "Approaches for quality appraisal:"
 
 - data validation with data rules
 - verification of abstraction with statistical measures
@@ -123,7 +122,7 @@ consistency, credibility, and timeliness.[^feder] Also straightforward list of "
 [^kahn]: Kahn MG, Callahan TJ, Barnard J, *et al.* A Harmonized Data Quality Assessment Terminology and Framework for the Secondary Use of Electronic Health Record Data. *EGEMS (Wash DC).* 2016;4(1):1244. [PMID: 27713905](https://pubmed.ncbi.nlm.nih.gov/27713905/)
 
 
-## Summary
+## Summary of domains of data quality
 
 Author $\to$      Lewis23    Weis13   Kahn16   Feder18         Wang21
 --------          ----       ----     ----     ----            ----
@@ -135,7 +134,7 @@ Currency          +          +                 +
 Conformance       +                   +                        +
 Bias              +
 
-
+Completeness and plausibility seem to be everyone's favorites.
 
 
 # Data quality, advanced
@@ -161,15 +160,24 @@ Bias              +
 
 ## When lab tests disappear/reappear (Mini-Sentinel)
 
-![](inr-down-up.jpg){ height=75% }
 
+::: columns
+:::: column
+![](inr-down-up.jpg){ height=75% }
+::::
+:::: column
+- Number of INR lab tests suddenly $18,000 \to 15,000$ one year (system started storing as plain text).
+
+- Then suddenly $18,000 \to 24,000$ a few years later (clinic started importing data from hospital).
+::::
+:::
 
 ## A bit of a mess (Mini-Sentinel)
 
 ![](platelet.png){height=90%}
 
 
-## Statistical MVP[^mvp]
+## Statistical approach to data quality in Million Veteran Program[^mvp]
 
 - Prior work tries to "detect the implausible numbers using prespecified thresholds\ldots."
 
@@ -191,11 +199,11 @@ record data with an application to the VA million veteran program.
 
 ## Missing data
 
-- under-recognized
-- potentially massive threat to validity
-- there is no one right way, but several wrong ways
-- usually "not my department," and detailed methods are out of scope.
-- "patient goes out of network" is another form of it
+- Under-recognized. (Tests get checked for a reason, and more frequently for sick patients.)
+- Potentially massive threat to validity.
+- There is no one right way to handle missing data, but several wrong ways.
+- Detailed methods are out of scope for this talk.
+- "Patient goes out of network" is another form of it (sometimes under-appreciated).
 
 
 ## Fidelity: Rich text note example
@@ -257,6 +265,8 @@ record data with an application to the VA million veteran program.
 Learning Isn’t Magic." HMS clinical informatics lecture series,
 2018-04-24.
 
+FIXME screenshot?
+
 
 
 
@@ -273,7 +283,7 @@ Learning Isn’t Magic." HMS clinical informatics lecture series,
 
 ![](discharge1.png){width=200px} ![](discharge2.png){width=200}\
 
-![Sorry I didn't know to look under `EDISTrackingCode`!](discharge3.png){width=300px}
+![I'm sorry that I didn't know to look under `EDISTrackingCode`!](discharge3.png){width=300px}
 
 
 
@@ -282,10 +292,14 @@ Learning Isn’t Magic." HMS clinical informatics lecture series,
 
 ## "Let's just do\ldots"
 
-Notes have typos, nonstandard abbreviations, and incorrect
+### Don't assume natural language processing will go according to plan!
+
+- Humans are maddeningly creative at expressing the same concept with many different phrasings.
+
+- Notes have typos, nonstandard abbreviations, and incorrect
 information, just like "structured" data.
 
-Transcription errors. "Intrathecal DepoCyt" $\to$ "intrathecal etoposide"
+- Not typos but transcription (or other) errors, nearly undetectable to untrained: "Intrathecal DepoCyt" $\to$ "Intrathecal etoposide"
 
 
 ## Automated information extraction from text[^ryu]
@@ -305,10 +319,10 @@ Labeling data is *expensive!* How did Google/Verily train a convolutional neural
 
 $(3 \ldots 7) \times 128,000 + 8 \times 9963 + 7 \times 1748 =$
 
-- 476,000 to 989,000 retinal imaging reads
+**476,000 to 989,000** retinal imaging reads
 
 
-## Cost of labeling data
+## Estimated cost of labeling data (Gulshan *et al.*)
 
 - 476,000 to 989,000 retinal imaging reads
 - A random article I found[^ijta] says 44 reads / hour
@@ -316,7 +330,7 @@ $(3 \ldots 7) \times 128,000 + 8 \times 9963 + 7 \times 1748 =$
 - 5--11 *working years*
 - 1.4--2.8 **million dollars!** (Before you do any computing at all)
 
-That is *just* to score images on "referable" diabetic retinopathy. No other features of retina whatsoever.
+That is *just* to score images for "referable" diabetic retinopathy. The AI can assess no other features of the retina whatsoever.
 
 [^ijta]: Kolomeyer *et al. International Journal of Telemedicine and Applications* 2012.
 
@@ -325,9 +339,12 @@ That is *just* to score images on "referable" diabetic retinopathy. No other fea
 
 ## When data aren't in there
 
-- medication fills
-- just taking the medication
-- income. don't assume ZIP does it for you.
+
+You might know\ldots                   But you don't know\ldots
+-----                                  -----
+A medicine was prescribed.             Did the patient fill the prescription?
+The patient filled the prescription.   How many days did the patient miss?
+The patient's ZIP code.                This *individual* patient's income.
 
 
 
@@ -338,11 +355,10 @@ That is *just* to score images on "referable" diabetic retinopathy. No other fea
 
 - Data are entered in "funny ways."
     - Well-meaning people enter the wrong number.
-    - People "just click through" because they're busy.
-    - It's surprisingly hard to "prove" the numbers are wrong.
+    - People "just click through" because they're so busy.
+    - It's surprisingly hard to "prove" some data are wrong.
     - Medical testing is *extremely* non-random!
 - Just because the table is named `procedures` doesn't mean\ldots
-- "Reshaping" data is a lot of work.
 - The data may be "in there" but hard to get.
 - The data may not be "in there" at all (system was not designed for it).
 
