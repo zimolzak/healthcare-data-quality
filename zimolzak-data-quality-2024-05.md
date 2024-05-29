@@ -24,7 +24,7 @@ aspectratio: 169
 What is *Clinical research informatics?*
 
 - I make various clinical research studies "go," using existing data.
-- "Phenotyping" using electronic health record (EHR) data
+- "Phenotyping" using electronic health record **(EHR)** data
 
 
 ## A detailed reference about secondary use[^MIT]
@@ -69,7 +69,7 @@ It's not "throwing away outliers."
 
 ::: columns
 :::: column
-![Plausible length for 6--13 month-old, not a retired veteran](72cm.jpg)
+![28 inches is a plausible length for a 6--13 month-old, not a retired veteran](72cm.jpg)
 ::::
 :::: column
 ![Are you sure you want to correct the BMI = 4484?](5-9inch.jpg)
@@ -79,8 +79,10 @@ It's not "throwing away outliers."
 
 ## Data quality frameworks: General references
 
-Some authors[^weis] say five domains: completeness, correctness,
-concordance, plausibility, and currency. There are several literature
+Early frameworks[^weis] described five domains of data quality: completeness, correctness,
+concordance, plausibility, and currency.
+
+There are several literature
 reviews.[^lit]
 
 [^lit]: Liaw ST, Guo JGN, Ansari S, *et al.* Quality assessment of real-world data repositories across the data life cycle: A literature review. *J Am Med Inform Assoc.* 2021;28(7):1591--1599. [PMID: 33496785](https://pubmed.ncbi.nlm.nih.gov/33496785/)
@@ -90,7 +92,7 @@ reviews.[^lit]
 
 ## Most recent systematic review
 
-The most recent systematic review[^seven] says 7 domains.
+A more recent systematic review[^seven] now describes 7 domains.
 However, the authors observe that there is no "standard approach for assessing EHR data quality", so
 "guidelines are needed for EHR data quality assessment\ldots."
 
@@ -265,7 +267,7 @@ record data with an application to the VA million veteran program.
 Learning Isn’t Magic." HMS clinical informatics lecture series,
 2018-04-24.
 
-FIXME screenshot?
+![Suspiciously low variability in respiratory rate over several days](somewhatabnormal.png){height=40%}
 
 
 
