@@ -80,9 +80,25 @@ It's not "throwing away outliers."
 
 ## General references
 
-- some authors say 5 domains:  completeness, correctness, concordance, plausibility, and currency[^weis]
+Some authors[^weis] say 5 domains: completeness, correctness,
+concordance, plausibility, and currency. Several literature
+reviews,[^lit]
 
-- lit review[^lit]
+## Most recent systematic review
+
+the most recent of which [^seven] says 7 domains.
+However, no "standard approach for assessing EHR data quality", so
+"Guidelines are needed for EHR data quality assessment\ldots."
+
+- completeness, followed by
+- correctness,
+- concordance,
+- plausibility, and
+- currency.
+- conformance
+- bias
+
+[^seven]: Lewis AE, Weiskopf N, Abrams ZB, et al. Electronic health record data quality assessment and tools: a systematic review. *J Am Med Inform Assoc.* 2023;30(10):1730--1740. [PMID: 37390812](https://pubmed.ncbi.nlm.nih.gov/37390812/)
 
 
 ## $3 \times 3$ Matrix[^three]
