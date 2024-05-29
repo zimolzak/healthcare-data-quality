@@ -84,6 +84,7 @@ Some authors[^weis] say 5 domains: completeness, correctness,
 concordance, plausibility, and currency. Several literature
 reviews,[^lit]
 
+
 ## Most recent systematic review
 
 the most recent of which [^seven] says 7 domains.
@@ -134,7 +135,19 @@ FIXME
 
 ## More approaches
 
-refs from MM et al
+Three categories in 2016: conformance, completeness,
+plausibility.[^kahn] And five from 2018: accuracy, completeness,
+consistency, credibility, and timeliness.[^feder] Also straightforward list of "Approaches for quality appraisal:"
+
+- data validation with data rules
+- verification of abstraction with statistical measures
+- data comparisons with manual chart review
+- management of missing data using statistical methods
+- data triangulation between multiple EHR databases
+
+[^feder]: Feder SL. Data Quality in Electronic Health Records Research: Quality Domains and Assessment Methods. *West J Nurs Res.* 2018;40(5):753--766. [PMID: 28322657](https://pubmed.ncbi.nlm.nih.gov/28322657/)
+
+[^kahn]: Kahn MG, Callahan TJ, Barnard J, et al. A Harmonized Data Quality Assessment Terminology and Framework for the Secondary Use of Electronic Health Record Data. *EGEMS (Wash DC).* 2016;4(1):1244. [PMID: 27713905](https://pubmed.ncbi.nlm.nih.gov/27713905/)
 
 
 ## Missing data
@@ -148,14 +161,22 @@ refs from MM et al
 
 ## Fidelity
 
-![](epic-note.png)
+![Image search: rich text progress note templates](richtext1.png){ height=75% }
 
-FIXME crop
+
+## Rich text example 2
+
+![](richtext2.png)
+
+
+## How you receive the note
+
+`Discharge Physician: Zzzz, MD Discharge Diagnosis: 1. Chest pain, resolved 2. Hypotension, resolved 3. ESRD on HD Patient Active Problem List Diagnosis Date Noted • Respiratory insufficiency xx/20xx • Septic shock (HCC) xx/20xx • Community acquired bacterial pneumonia xx/20xx Flowsheet Rows Flowsheet Row Most Recent Value Malnutrition Evaluation Does not meet criteria for protein-calorie malnutrition Discharge Vitals: Vitals: xx/20xx BP: Pulse: 100 Resp: 18 Temp: SpO2: 99% Discharge Labs: Lab Results Component Value Date WBC 6.0 xx/20xx HGB 8.8 (L) xx/20xx HCT 25.4 (L) xx/20xx MCV 92 xx/20xx PLT 181 xx/20xx Lab Results Component Value Date GLUCOSE 85 xx/20xx CALCIUM 9.8 xx/20xx NA 133 (L) xx/20xx K 4.0 xx/20xx CO2 23 xx/20xx CL 95 (L) xx/20xx BUN 54 (H) xx/20xx CREATININE 13.0 (H) xx/20xx Discharged Condition: fair Consults: Treatment Team: Consulting Physician: Zzzz, MD Consulting Physician: Zzzz, MD`
 
 
 ## Fidelity
 
-Matheny example of dates etc UTC
+FIXME Matheny example of dates etc UTC
 
 
 ## Rampant errors
@@ -175,7 +196,7 @@ Learning Isn’t Magic." HMS clinical informatics lecture series,
 ## Definition
 
 analytic dataset:
-: insert definition here
+: FIXME insert definition here
 
 Also known as "tidy."
 
@@ -199,6 +220,10 @@ what about derived things (BMI)
 # Merging fragmented data
 
 ## Fillmore *et al.* lab data integration
+
+FIXME image
+
+
 
 
 # Unexpected data naming
@@ -253,6 +278,7 @@ That is *just* to score images on "referable" diabetic retinopathy. No other fea
 
 ## When data aren't in there
 
+- medication fills
 - just taking the medication
 - income. don't assume ZIP does it for you.
 
