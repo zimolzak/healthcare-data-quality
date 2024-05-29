@@ -44,9 +44,9 @@ From "little picture" to big picture:
     - low fidelity extraction
     - missing or highly missing
     - rampant errors or "practically lies"
-2. Data need to be turned into *analytic dataset* (more later)
-3. Data exist but are called 130 different things.
-4. Data are called misleading things (names don't mean what clinicians think)
+2. Data exist but are called 130 different things.
+3. Data fields called misleading things (names don't mean what clinicians think)
+4. Data need to be turned into *analytic dataset* (more later)
 5. Data exist only in "free text"
     - Data can be auto-extracted but we must build that pipeline.
     - Data exist but need human judgment to extract.
@@ -84,6 +84,10 @@ Some authors[^weis] say five domains: completeness, correctness,
 concordance, plausibility, and currency. Several literature
 reviews,[^lit]
 
+[^lit]: Liaw ST, Guo JGN, Ansari S, *et al.* Quality assessment of real-world data repositories across the data life cycle: A literature review. *J Am Med Inform Assoc.* 2021;28(7):1591--1599. [PMID: 33496785](https://pubmed.ncbi.nlm.nih.gov/33496785/)
+
+[^weis]: Weiskopf NG, Weng C. Methods and dimensions of electronic health record data quality assessment: enabling reuse for clinical research. *J Am Med Inform Assoc.* 2013;20(1):141--151. [PMID: 22733976](https://pubmed.ncbi.nlm.nih.gov/22733976/)
+
 
 ## Most recent systematic review
 
@@ -99,20 +103,8 @@ However, no "standard approach for assessing EHR data quality", so
 - conformance
 - bias
 
-[^seven]: Lewis AE, Weiskopf N, Abrams ZB, et al. Electronic health record data quality assessment and tools: a systematic review. *J Am Med Inform Assoc.* 2023;30(10):1730--1740. [PMID: 37390812](https://pubmed.ncbi.nlm.nih.gov/37390812/)
+[^seven]: Lewis AE, Weiskopf N, Abrams ZB, *et al.* Electronic health record data quality assessment and tools: a systematic review. *J Am Med Inform Assoc.* 2023;30(10):1730--1740. [PMID: 37390812](https://pubmed.ncbi.nlm.nih.gov/37390812/)
 
-
-## $3 \times 3$ Matrix[^three]
-
-FIXME insert image
-
-[^three]: Weiskopf NG, Bakken S, Hripcsak G, Weng C. A Data Quality
-Assessment Guideline for Electronic Health Record Data Reuse. *EGEMS
-(Wash DC).* 2017;5(1):14. [PMID: 29881734](https://pubmed.ncbi.nlm.nih.gov/29881734/)
-
-[^lit]: Liaw ST, Guo JGN, Ansari S, et al. Quality assessment of real-world data repositories across the data life cycle: A literature review. *J Am Med Inform Assoc.* 2021;28(7):1591--1599. [PMID: 33496785](https://pubmed.ncbi.nlm.nih.gov/33496785/)
-
-[^weis]: Weiskopf NG, Weng C. Methods and dimensions of electronic health record data quality assessment: enabling reuse for clinical research. *J Am Med Inform Assoc.* 2013;20(1):141--151. [PMID: 22733976](https://pubmed.ncbi.nlm.nih.gov/22733976/)
 
 ## More approaches
 
@@ -128,19 +120,19 @@ consistency, credibility, and timeliness.[^feder] Also straightforward list of "
 
 [^feder]: Feder SL. Data Quality in Electronic Health Records Research: Quality Domains and Assessment Methods. *West J Nurs Res.* 2018;40(5):753--766. [PMID: 28322657](https://pubmed.ncbi.nlm.nih.gov/28322657/)
 
-[^kahn]: Kahn MG, Callahan TJ, Barnard J, et al. A Harmonized Data Quality Assessment Terminology and Framework for the Secondary Use of Electronic Health Record Data. *EGEMS (Wash DC).* 2016;4(1):1244. [PMID: 27713905](https://pubmed.ncbi.nlm.nih.gov/27713905/)
+[^kahn]: Kahn MG, Callahan TJ, Barnard J, *et al.* A Harmonized Data Quality Assessment Terminology and Framework for the Secondary Use of Electronic Health Record Data. *EGEMS (Wash DC).* 2016;4(1):1244. [PMID: 27713905](https://pubmed.ncbi.nlm.nih.gov/27713905/)
 
 
 ## Summary
 
-Category          Lewis23    Weis13   Kahn16   Feder18
---------          ----       ----     ----     ----
-**Completeness**  +          +        +        +
+Author $\to$      Lewis23    Weis13   Kahn16   Feder18         Wang21
+--------          ----       ----     ----     ----            ----
+**Completeness**  +          +        +        +               +
 Correctness       +          +                 +
 Concordance       +          +                 "consistency"
-**Plausibility**  +          +        +        "credibility"
+**Plausibility**  +          +        +        "credibility"   +
 Currency          +          +                 +
-Conformance       +                   +
+Conformance       +                   +                        +
 Bias              +
 
 
@@ -154,15 +146,36 @@ Bias              +
 
 - domains: conformance, completeness, and plausibility
 
+FIXME what did they find?
+
 [^mvp]: Wang H, Belitskaya-Levy I, Wu F, *et al.* A statistical quality
 assessment method for longitudinal observations in electronic health
 record data with an application to the VA million veteran program.
 *BMC Med Inform Decis Mak.* 2021;21(1):289. [PMID: 34670548](https://pubmed.ncbi.nlm.nih.gov/34670548/)
 
 
-## Statistical mini-Sentinel
+## Statistical mini-Sentinel[^mini]
 
-FIXME
+### Harder than expected
+
+> [S]ome data partners found LOINC associated with essentially all
+> results, others had LOINC associated with some results, and others
+> found no LOINC in source data.
+
+### How they follow data quality
+
+> Checks included assessment of variable completeness, consistency,
+> content, alignment with speciﬁcations, patterns, and trends. Data
+> distributions are examined over time within and between MSDD
+> refreshes
+
+
+[^mini]: Raebel MA, Haynes K, Woodworth TS, *et al.* Electronic clinical laboratory test results data tables: lessons from Mini-Sentinel. *Pharmacoepidemiol Drug Saf.* 2014;23(6):609--618. [PMID: 24677577](https://pubmed.ncbi.nlm.nih.gov/24677577/)
+
+
+## When lab tests disappear/reappear
+
+![](inr-down-up.jpg){ height=75% }
 
 
 ## Missing data
@@ -205,6 +218,23 @@ Learning Isn’t Magic." HMS clinical informatics lecture series,
 
 
 
+# Merging fragmented data
+
+## Data integration or harmonization[^nate]
+
+![](nate.png){ height=75% }
+
+[^nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine Learning for Laboratory Data Integration. *Stud Health Technol Inform.* 2019;264:133--137. [PMID: 31437900](https://pubmed.ncbi.nlm.nih.gov/31437900/)
+
+
+## Unexpected data naming: Real-life examples
+
+`procedures` contains what?
+
+`discharge` column FIXME image from GSBS talk
+
+
+
 
 # Making an analytic dataset
 
@@ -232,24 +262,10 @@ what about derived things (BMI)
 
 
 
-# Merging fragmented data
-
-## Lab data integration[^nate]
-
-![](nate.png)
-
-[^nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine Learning for Laboratory Data Integration. *Stud Health Technol Inform.* 2019;264:133--137. [PMID: 31437900](https://pubmed.ncbi.nlm.nih.gov/31437900/)
 
 
 
 
-# Unexpected data naming
-
-## Real-life examples
-
-`procedures` contains what?
-
-`discharge` column
 
 
 
@@ -264,7 +280,7 @@ information, just like "structured" data.
 Transcription errors. "Intrathecal DepoCyt" $\to$ "intrathecal etoposide"
 
 
-## Ryu et al. auto extraction
+## Ryu *et al.* auto extraction
 
 FIXME[^ryu]
 
