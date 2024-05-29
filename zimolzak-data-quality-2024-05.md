@@ -179,7 +179,9 @@ Bias              +
   with past values *for that patient.* Exponentially weighted moving
   average.
 
-- FIXME what did they find?
+- This approach had fewer false positives, higher power, higher
+  positive and predictive value, compared to the "population
+  threshold" approach.
 
 [^mvp]: Wang H, Belitskaya-Levy I, Wu F, *et al.* A statistical quality
 assessment method for longitudinal observations in electronic health
