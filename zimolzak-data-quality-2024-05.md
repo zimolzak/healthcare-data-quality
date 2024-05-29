@@ -91,7 +91,7 @@ reviews,[^lit]
 
 ## Most recent systematic review
 
-the most recent of which [^seven] says 7 domains.
+the most recent of which[^seven] says 7 domains.
 However, no "standard approach for assessing EHR data quality", so
 "Guidelines are needed for EHR data quality assessment\ldots."
 
@@ -176,6 +176,11 @@ record data with an application to the VA million veteran program.
 ## When lab tests disappear/reappear
 
 ![](inr-down-up.jpg){ height=75% }
+
+
+## A bit of a mess
+
+![](platelet.png)
 
 
 ## Missing data
@@ -280,14 +285,16 @@ information, just like "structured" data.
 Transcription errors. "Intrathecal DepoCyt" $\to$ "intrathecal etoposide"
 
 
-## Ryu *et al.* auto extraction
+## Automated information extraction from text[^ryu]
 
-FIXME[^ryu]
+Rules-based and machine learning approaches work! But the problem was selected carefully.
+
+![](ryu.jpg){ height=60% }
 
 [^ryu]: Ryu JH, Zimolzak AJ. Natural Language Processing of Serum Protein Electrophoresis Reports in the Veterans Affairs Health Care System. *JCO Clin Cancer Inform.* 2020;4:749--756. [PMID: 32813561](https://pubmed.ncbi.nlm.nih.gov/32813561/)
 
 
-## Harder than people think
+## Machine learning: harder than people think
 
 Labeling data is *expensive!* How did Google/Verily train a convolutional neural net to interpret retinal fundus photographs?[^gulshan]
 
