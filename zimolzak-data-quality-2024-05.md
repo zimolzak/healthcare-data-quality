@@ -131,6 +131,18 @@ consistency, credibility, and timeliness.[^feder] Also straightforward list of "
 [^kahn]: Kahn MG, Callahan TJ, Barnard J, et al. A Harmonized Data Quality Assessment Terminology and Framework for the Secondary Use of Electronic Health Record Data. *EGEMS (Wash DC).* 2016;4(1):1244. [PMID: 27713905](https://pubmed.ncbi.nlm.nih.gov/27713905/)
 
 
+## Summary
+
+Category          Lewis23    Weis13   Kahn16   Feder18
+--------          ----       ----     ----     ----
+**Completeness**  +          +        +        +
+Correctness       +          +                 +
+Concordance       +          +                 "consistency"
+**Plausibility**  +          +        +        "credibility"
+Currency          +          +                 +
+Conformance       +                   +
+Bias              +
+
 
 
 
