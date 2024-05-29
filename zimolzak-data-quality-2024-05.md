@@ -140,24 +140,6 @@ Bias              +
 
 # Data quality, advanced
 
-## Statistical MVP[^mvp]
-
-- Prior work tries to "detect the implausible numbers using prespecified thresholds\ldots."
-
-- Domains: conformance, completeness, and plausibility
-
-- Improved plausibility score by testing height and weight correlation
-  with past values *for that patient.* Exponentially weighted moving
-  average.
-
-- FIXME what did they find?
-
-[^mvp]: Wang H, Belitskaya-Levy I, Wu F, *et al.* A statistical quality
-assessment method for longitudinal observations in electronic health
-record data with an application to the VA million veteran program.
-*BMC Med Inform Decis Mak.* 2021;21(1):289. [PMID: 34670548](https://pubmed.ncbi.nlm.nih.gov/34670548/)
-
-
 ## One approach (Mini-Sentinel)[^mini]
 
 ### Harder than expected
@@ -185,6 +167,24 @@ record data with an application to the VA million veteran program.
 ## A bit of a mess (Mini-Sentinel)
 
 ![](platelet.png){height=90%}
+
+
+## Statistical MVP[^mvp]
+
+- Prior work tries to "detect the implausible numbers using prespecified thresholds\ldots."
+
+- Domains: conformance, completeness, and plausibility
+
+- Improved plausibility score by testing height and weight correlation
+  with past values *for that patient.* Exponentially weighted moving
+  average.
+
+- FIXME what did they find?
+
+[^mvp]: Wang H, Belitskaya-Levy I, Wu F, *et al.* A statistical quality
+assessment method for longitudinal observations in electronic health
+record data with an application to the VA million veteran program.
+*BMC Med Inform Decis Mak.* 2021;21(1):289. [PMID: 34670548](https://pubmed.ncbi.nlm.nih.gov/34670548/)
 
 
 ## Missing data
