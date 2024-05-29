@@ -241,40 +241,6 @@ Learning Isn’t Magic." HMS clinical informatics lecture series,
 
 
 
-# Making an analytic dataset
-
-## Definition
-
-analytic dataset:
-: FIXME insert definition here
-
-Also known as "tidy."
-
-Also known as "wide."
-
-
-## What EHRs are really like
-
-FIXME table names
-
-
-## What to do with time series
-
-many approaches.
-
-what about derived things (BMI)
-
-
-
-
-
-
-
-
-
-
-
-
 # Extracting data from free text & beyond
 
 ## "Let's just do\ldots"
