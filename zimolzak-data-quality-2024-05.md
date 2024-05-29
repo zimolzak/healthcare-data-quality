@@ -207,9 +207,39 @@ record data with an application to the VA million veteran program.
 `Discharge Physician: Zzzz, MD Discharge Diagnosis: 1. Chest pain, resolved 2. Hypotension, resolved 3. ESRD on HD Patient Active Problem List Diagnosis Date Noted • Respiratory insufficiency xx/20xx • Septic shock (HCC) xx/20xx • Community acquired bacterial pneumonia xx/20xx Flowsheet Rows Flowsheet Row Most Recent Value Malnutrition Evaluation Does not meet criteria for protein-calorie malnutrition Discharge Vitals: Vitals: xx/20xx BP: Pulse: 100 Resp: 18 Temp: SpO2: 99% Discharge Labs: Lab Results Component Value Date WBC 6.0 xx/20xx HGB 8.8 (L) xx/20xx HCT 25.4 (L) xx/20xx MCV 92 xx/20xx PLT 181 xx/20xx Lab Results Component Value Date GLUCOSE 85 xx/20xx CALCIUM 9.8 xx/20xx NA 133 (L) xx/20xx K 4.0 xx/20xx CO2 23 xx/20xx CL 95 (L) xx/20xx BUN 54 (H) xx/20xx CREATININE 13.0 (H) xx/20xx Discharged Condition: fair Consults: Treatment Team: Consulting Physician: Zzzz, MD Consulting Physician: Zzzz, MD`
 
 
-## Fidelity
+## Why does one clinic look like patients stay > 1 day?
 
-FIXME Matheny example of dates etc UTC
+|Patient    | Clinic arrival |  Site  | Clinic checkout|
+|-----------|----------------|--------|---------|
+|Scott      | 2023-03-04     | Houston       | 2023-03-04 |
+|Ryan	    | 2023-04-29     | Houston       | 2023-04-29 |
+|Knepper    | 2023-05-11     | Houston       | 2023-05-11 |
+|Hatcher    | 2023-09-15     | Houston       | 2023-09-15 |
+|Lanier     | 2023-10-05     | Houston       | 2023-10-05 |
+|
+|Strawberry | 2023-02-18     | New York       | **2023-02-19** |
+|Gooden     | 2023-03-12     | New York       | **2023-03-13** |
+|Hernandez  | 2023-04-01     | New York       | **2023-04-02** |
+|Ojeda	    | 2023-06-22     | New York       | **2023-06-23** |
+|Wilson	    | 2023-07-05     | New York       | **2023-07-06** |
+
+
+## What is really happening:
+
+|Patient    | Clinic arrival |  Site  | Clinic checkout|
+|-----------|----------------|--------|---------|
+|Scott      | 2023-03-04 11:01 CST   | Houston       | 2023-03-04 23:59 CST |
+|Ryan	    | 2023-04-29 13:40 CDT   | Houston       | 2023-04-29 23:59 CDT |
+|Knepper    | 2023-05-11 10:20 CDT   | Houston       | 2023-05-11 23:59 CDT |
+|Hatcher    | 2023-09-15 09:32 CDT   | Houston       | 2023-09-15 23:59 CDT  |
+|Lanier     | 2023-10-05 12:20 CDT   | Houston       | 2023-10-05 23:59 CDT  |
+|
+|Strawberry | 2023-02-18 16:44 UTC   | New York       | **2023-02-19** 04:59 UTC |
+|Gooden     | 2023-03-01 17:15 UTC   | New York       | **2023-03-13** 04:59 UTC |
+|Hernandez  | 2023-04-01 13:33 UTC   | New York       | **2023-04-02** 03:59 UTC |
+|Ojeda	    | 2023-06-22 18:09 UTC   | New York       | **2023-06-23** 03:59 UTC |
+|Wilson	    | 2023-07-05 16:40 UTC   | New York       | **2023-07-06** 03:59 UTC |
+
 
 
 ## Rampant errors
@@ -232,16 +262,12 @@ Learning Isn’t Magic." HMS clinical informatics lecture series,
 [^nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine Learning for Laboratory Data Integration. *Stud Health Technol Inform.* 2019;264:133--137. [PMID: 31437900](https://pubmed.ncbi.nlm.nih.gov/31437900/)
 
 
-## Unexpected data naming: Discharge against medical advice?
+## Unexpected data naming: ER discharge against medical advice?
 
 ![](discharge1.png){width=200px} ![](discharge2.png){width=200}\
 
 ![Sorry I didn't know to look under `EDISTrackingCode`!](discharge3.png){width=300px}
 
-
-## Unexpected data naming (2)
-
-`procedures` contains what?
 
 
 
