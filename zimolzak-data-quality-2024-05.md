@@ -144,9 +144,13 @@ Bias              +
 
 - Prior work tries to "detect the implausible numbers using prespecified thresholds\ldots."
 
-- domains: conformance, completeness, and plausibility
+- Domains: conformance, completeness, and plausibility
 
-FIXME what did they find?
+- Improved plausibility score by testing height and weight correlation
+  with past values *for that patient.* Exponentially weighted moving
+  average.
+
+- FIXME what did they find?
 
 [^mvp]: Wang H, Belitskaya-Levy I, Wu F, *et al.* A statistical quality
 assessment method for longitudinal observations in electronic health
