@@ -154,7 +154,7 @@ record data with an application to the VA million veteran program.
 *BMC Med Inform Decis Mak.* 2021;21(1):289. [PMID: 34670548](https://pubmed.ncbi.nlm.nih.gov/34670548/)
 
 
-## Statistical mini-Sentinel[^mini]
+## One approach (Mini-Sentinel)[^mini]
 
 ### Harder than expected
 
@@ -173,14 +173,14 @@ record data with an application to the VA million veteran program.
 [^mini]: Raebel MA, Haynes K, Woodworth TS, *et al.* Electronic clinical laboratory test results data tables: lessons from Mini-Sentinel. *Pharmacoepidemiol Drug Saf.* 2014;23(6):609--618. [PMID: 24677577](https://pubmed.ncbi.nlm.nih.gov/24677577/)
 
 
-## When lab tests disappear/reappear
+## When lab tests disappear/reappear (Mini-Sentinel)
 
 ![](inr-down-up.jpg){ height=75% }
 
 
-## A bit of a mess
+## A bit of a mess (Mini-Sentinel)
 
-![](platelet.png)
+![](platelet.png){height=90%}
 
 
 ## Missing data
@@ -192,22 +192,22 @@ record data with an application to the VA million veteran program.
 - "patient goes out of network" is another form of it
 
 
-## Fidelity
+## Fidelity: Rich text note example
 
 ![Image search: rich text progress note templates](richtext1.png){ height=75% }
 
 
-## Rich text example 2
+## Fidelity: Rich text note example 2
 
 ![](richtext2.png)
 
 
-## How you receive the note
+## Fidelity: How you receive the note (almost no separators)
 
 `Discharge Physician: Zzzz, MD Discharge Diagnosis: 1. Chest pain, resolved 2. Hypotension, resolved 3. ESRD on HD Patient Active Problem List Diagnosis Date Noted • Respiratory insufficiency xx/20xx • Septic shock (HCC) xx/20xx • Community acquired bacterial pneumonia xx/20xx Flowsheet Rows Flowsheet Row Most Recent Value Malnutrition Evaluation Does not meet criteria for protein-calorie malnutrition Discharge Vitals: Vitals: xx/20xx BP: Pulse: 100 Resp: 18 Temp: SpO2: 99% Discharge Labs: Lab Results Component Value Date WBC 6.0 xx/20xx HGB 8.8 (L) xx/20xx HCT 25.4 (L) xx/20xx MCV 92 xx/20xx PLT 181 xx/20xx Lab Results Component Value Date GLUCOSE 85 xx/20xx CALCIUM 9.8 xx/20xx NA 133 (L) xx/20xx K 4.0 xx/20xx CO2 23 xx/20xx CL 95 (L) xx/20xx BUN 54 (H) xx/20xx CREATININE 13.0 (H) xx/20xx Discharged Condition: fair Consults: Treatment Team: Consulting Physician: Zzzz, MD Consulting Physician: Zzzz, MD`
 
 
-## Why does one clinic look like patients stay > 1 day?
+## Fidelity: Why does one clinic look like patients stay > 1 day?
 
 |Patient    | Clinic arrival |  Site  | Clinic checkout|
 |-----------|----------------|--------|---------|
@@ -224,7 +224,7 @@ record data with an application to the VA million veteran program.
 |Wilson	    | 2023-07-05     | New York       | **2023-07-06** |
 
 
-## What is really happening:
+## Fidelity: What is really happening?[^mat]
 
 |Patient    | Clinic arrival |  Site  | Clinic checkout|
 |-----------|----------------|--------|---------|
@@ -240,9 +240,10 @@ record data with an application to the VA million veteran program.
 |Ojeda	    | 2023-06-22 18:09 UTC   | New York       | **2023-06-23** 03:59 UTC |
 |Wilson	    | 2023-07-05 16:40 UTC   | New York       | **2023-07-06** 03:59 UTC |
 
+[^mat]: Matheny M, LeNoue-Newton M. A Comparison of Encounter Data Between VistA/CPRS & the Federal Electronic Health Record (EHR) Systems. *VA HSR Cyberseminar.* 2024-05-22. https://www.hsrd.research.va.gov/cyberseminars/
 
 
-## Rampant errors
+## "Rampant" errors
 
 > If you don't understand the data generation process, you're gonna miss stuff.
 
