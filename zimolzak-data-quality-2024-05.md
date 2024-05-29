@@ -219,18 +219,22 @@ what about derived things (BMI)
 
 # Merging fragmented data
 
-## Fillmore *et al.* lab data integration
+## Lab data integration[^nate]
 
-FIXME image
+![](nate.png)
+
+[^nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine Learning for Laboratory Data Integration. *Stud Health Technol Inform.* 2019;264:133--137. [PMID: 31437900](https://pubmed.ncbi.nlm.nih.gov/31437900/)
 
 
 
 
 # Unexpected data naming
 
-## Example from BCM
+## Real-life examples
 
 `procedures` contains what?
+
+`discharge` column
 
 
 
