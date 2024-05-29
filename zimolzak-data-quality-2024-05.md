@@ -64,7 +64,7 @@ It's not "throwing away outliers."
 
 
 
-# When data contain errors
+# Data quality frameworks
 
 ## Simple errors (what many people think "data cleaning" is)
 
@@ -80,7 +80,7 @@ It's not "throwing away outliers."
 
 ## General references
 
-Some authors[^weis] say 5 domains: completeness, correctness,
+Some authors[^weis] say five domains: completeness, correctness,
 concordance, plausibility, and currency. Several literature
 reviews,[^lit]
 
@@ -106,14 +106,6 @@ However, no "standard approach for assessing EHR data quality", so
 
 FIXME insert image
 
-
-## Statistical MVP[^mvp]
-
-- Prior work tries to "detect the implausible numbers using prespecified thresholds\ldots."
-
-- domains: conformance, completeness, and plausibility
-
-
 [^three]: Weiskopf NG, Bakken S, Hripcsak G, Weng C. A Data Quality
 Assessment Guideline for Electronic Health Record Data Reuse. *EGEMS
 (Wash DC).* 2017;5(1):14. [PMID: 29881734](https://pubmed.ncbi.nlm.nih.gov/29881734/)
@@ -121,17 +113,6 @@ Assessment Guideline for Electronic Health Record Data Reuse. *EGEMS
 [^lit]: Liaw ST, Guo JGN, Ansari S, et al. Quality assessment of real-world data repositories across the data life cycle: A literature review. *J Am Med Inform Assoc.* 2021;28(7):1591--1599. [PMID: 33496785](https://pubmed.ncbi.nlm.nih.gov/33496785/)
 
 [^weis]: Weiskopf NG, Weng C. Methods and dimensions of electronic health record data quality assessment: enabling reuse for clinical research. *J Am Med Inform Assoc.* 2013;20(1):141--151. [PMID: 22733976](https://pubmed.ncbi.nlm.nih.gov/22733976/)
-
-[^mvp]: Wang H, Belitskaya-Levy I, Wu F, *et al.* A statistical quality
-assessment method for longitudinal observations in electronic health
-record data with an application to the VA million veteran program.
-*BMC Med Inform Decis Mak.* 2021;21(1):289. [PMID: 34670548](https://pubmed.ncbi.nlm.nih.gov/34670548/)
-
-
-## Statistical mini-Sentinel
-
-FIXME
-
 
 ## More approaches
 
@@ -148,6 +129,28 @@ consistency, credibility, and timeliness.[^feder] Also straightforward list of "
 [^feder]: Feder SL. Data Quality in Electronic Health Records Research: Quality Domains and Assessment Methods. *West J Nurs Res.* 2018;40(5):753--766. [PMID: 28322657](https://pubmed.ncbi.nlm.nih.gov/28322657/)
 
 [^kahn]: Kahn MG, Callahan TJ, Barnard J, et al. A Harmonized Data Quality Assessment Terminology and Framework for the Secondary Use of Electronic Health Record Data. *EGEMS (Wash DC).* 2016;4(1):1244. [PMID: 27713905](https://pubmed.ncbi.nlm.nih.gov/27713905/)
+
+
+
+
+
+# Data quality, advanced
+
+## Statistical MVP[^mvp]
+
+- Prior work tries to "detect the implausible numbers using prespecified thresholds\ldots."
+
+- domains: conformance, completeness, and plausibility
+
+[^mvp]: Wang H, Belitskaya-Levy I, Wu F, *et al.* A statistical quality
+assessment method for longitudinal observations in electronic health
+record data with an application to the VA million veteran program.
+*BMC Med Inform Decis Mak.* 2021;21(1):289. [PMID: 34670548](https://pubmed.ncbi.nlm.nih.gov/34670548/)
+
+
+## Statistical mini-Sentinel
+
+FIXME
 
 
 ## Missing data
@@ -251,7 +254,9 @@ Transcription errors. "Intrathecal DepoCyt" $\to$ "intrathecal etoposide"
 
 ## Ryu et al. auto extraction
 
-FIXME
+FIXME[^ryu]
+
+[^ryu]: Ryu JH, Zimolzak AJ. Natural Language Processing of Serum Protein Electrophoresis Reports in the Veterans Affairs Health Care System. *JCO Clin Cancer Inform.* 2020;4:749--756. [PMID: 32813561](https://pubmed.ncbi.nlm.nih.gov/32813561/)
 
 
 ## Harder than people think
