@@ -232,12 +232,16 @@ Learning Isn’t Magic." HMS clinical informatics lecture series,
 [^nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine Learning for Laboratory Data Integration. *Stud Health Technol Inform.* 2019;264:133--137. [PMID: 31437900](https://pubmed.ncbi.nlm.nih.gov/31437900/)
 
 
-## Unexpected data naming: Real-life examples
+## Unexpected data naming: Discharge against medical advice?
+
+![](discharge1.png){width=200px} ![](discharge2.png){width=200}\
+
+![Sorry I didn't know to look under `EDISTrackingCode`!](discharge3.png){width=300px}
+
+
+## Unexpected data naming (2)
 
 `procedures` contains what?
-
-`discharge` column FIXME image from GSBS talk
-
 
 
 

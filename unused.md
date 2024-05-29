@@ -35,3 +35,12 @@ FIXME table names
 many approaches.
 
 what about derived things (BMI)
+
+
+
+
+## Unexpected data naming (2)
+
+`procedures` contains what?
+
+or screenshot from epic pdf manual
