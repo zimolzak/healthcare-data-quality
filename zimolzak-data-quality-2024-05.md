@@ -378,3 +378,5 @@ The patient's ZIP code.                This *individual* patient's income.
 - Source for this talk (make corrections/suggestions)--- <https://github.com/zimolzak/healthcare-data-quality>
 
 - This work © 2024 by Andrew Zimolzak is licensed under CC BY-NC-SA 4.0, [click for license details](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+- Cite using doi:10.5281/zenodo.11393189
