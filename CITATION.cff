@@ -1,0 +1,27 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Electronic Health Record Data Quality
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Andrew
+    family-names: Zimolzak
+    email: zimolzak@bcm.edu
+    affiliation: Baylor College of Medicine
+    orcid: 'https://orcid.org/0000-0003-0973-5639'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.11393189
+repository-code: 'https://github.com/zimolzak/healthcare-data-quality'
+keywords:
+  - Electronic Health Records
+  - Documentation
+  - Quality Control
+  - Data Accuracy
+  - Phenomics
+  - Phenotype
+license: CC-BY-NC-SA-4.0
