@@ -7,6 +7,7 @@
 - put doi on final slide
 - edit metadata (lots) on zenodo
 - link to pdf in README
+- github topics (keywords)
 
 pdf link looks something like this:
 
