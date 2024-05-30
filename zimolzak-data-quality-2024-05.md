@@ -30,7 +30,7 @@ What is *Clinical research informatics?*
 ## A detailed reference about secondary use[^MIT]
 
 [^MIT]: MIT Critical Data. *Secondary Analysis of Electronic Health Records.*
-Springer Cham, 2016. [Click for **free** access!](https://link.springer.com/book/10.1007/978-3-319-43742-2)
+Springer; 2016. [Click for **free** access!](https://link.springer.com/book/10.1007/978-3-319-43742-2)
 
 ![](book.jpg){ height=75% }
 
@@ -96,13 +96,13 @@ A more recent systematic review[^seven] now describes 7 domains.
 However, the authors observe that there is no "standard approach for assessing EHR data quality", so
 "guidelines are needed for EHR data quality assessment\ldots."
 
-- completeness, followed by
-- correctness,
-- concordance,
-- plausibility, and
-- currency.
-- conformance
-- bias
+- Completeness
+- Correctness
+- Concordance
+- Plausibility
+- Currency
+- Conformance
+- Bias
 
 [^seven]: Lewis AE, Weiskopf N, Abrams ZB, *et al.* Electronic health record data quality assessment and tools: a systematic review. *J Am Med Inform Assoc.* 2023;30(10):1730--1740. [PMID: 37390812](https://pubmed.ncbi.nlm.nih.gov/37390812/)
 
@@ -113,11 +113,11 @@ Three categories of data quality described in a 2016 paper: conformance, complet
 plausibility.[^kahn] And five categories in a 2018 paper: accuracy, completeness,
 consistency, credibility, and timeliness.[^feder] The latter paper also describes a straightforward list of "Approaches for quality appraisal:"
 
-- data validation with data rules
-- verification of abstraction with statistical measures
-- data comparisons with manual chart review
-- management of missing data using statistical methods
-- data triangulation between multiple EHR databases
+- Data validation with data rules
+- Verification of abstraction with statistical measures
+- Data comparisons with manual chart review
+- Management of missing data using statistical methods
+- Data triangulation between multiple EHR databases
 
 [^feder]: Feder SL. Data Quality in Electronic Health Records Research: Quality Domains and Assessment Methods. *West J Nurs Res.* 2018;40(5):753--766. [PMID: 28322657](https://pubmed.ncbi.nlm.nih.gov/28322657/)
 
@@ -136,24 +136,26 @@ Currency          +          +                 +
 Conformance       +                   +                        +
 Bias              +
 
-Completeness and plausibility seem to be everyone's favorites.
+**Completeness and plausibility seem to be everyone's favorites!**
 
 
 # Data quality, advanced
 
 ## One approach (Mini-Sentinel)[^mini]
 
-### Harder than expected
+### It was harder than they expected to "just merge labs" from data partners.
+
+LOINC is a code that is supposed to take care of this, but\ldots
 
 > [S]ome data partners found LOINC associated with essentially all
 > results, others had LOINC associated with some results, and others
-> found no LOINC in source data.
+> found **no LOINC in source data.**
 
-### How they follow data quality
+### How they follow data quality (sounds like "manually"):
 
 > Checks included assessment of variable completeness, consistency,
 > content, alignment with speciﬁcations, patterns, and trends. Data
-> distributions are examined over time within and between MSDD
+> distributions are **examined** over time within and between [data]
 > refreshes
 
 
@@ -168,9 +170,9 @@ Completeness and plausibility seem to be everyone's favorites.
 ![](inr-down-up.jpg){ height=75% }
 ::::
 :::: column
-- Number of INR lab tests suddenly $18,000 \to 15,000$ one year (system started storing as plain text).
+- Number of INR lab tests suddenly dropped $18,000 \to 15,000$ one year. (System started storing as plain text.)
 
-- Then suddenly $18,000 \to 24,000$ a few years later (clinic started importing data from hospital).
+- Then suddenly $18,000 \to 24,000$ a few years later. (Clinic started importing data from hospital.)
 ::::
 :::
 
@@ -190,7 +192,7 @@ Completeness and plausibility seem to be everyone's favorites.
   average.
 
 - This approach had fewer false positives, higher power, higher
-  positive and predictive value, compared to the "population
+  positive and negative predictive value, compared to the "population
   threshold" approach.
 
 [^mvp]: Wang H, Belitskaya-Levy I, Wu F, *et al.* A statistical quality
@@ -205,12 +207,12 @@ record data with an application to the VA million veteran program.
 - Potentially massive threat to validity.
 - There is no one right way to handle missing data, but several wrong ways.
 - Detailed methods are out of scope for this talk.
-- "Patient goes out of network" is another form of it (sometimes under-appreciated).
+- "Patient goes out of network" is another form of it (also sometimes under-appreciated).
 
 
 ## Fidelity: Rich text note example
 
-![Image search: rich text progress note templates](richtext1.png){ height=75% }
+![Found on an image search for 'rich text progress note templates'](richtext1.png){ height=75% }
 
 
 ## Fidelity: Rich text note example 2
@@ -218,7 +220,7 @@ record data with an application to the VA million veteran program.
 ![](richtext2.png)
 
 
-## Fidelity: How you receive the note (almost no separators)
+## Fidelity: How you receive the note (almost no separators!)
 
 `Discharge Physician: Zzzz, MD Discharge Diagnosis: 1. Chest pain, resolved 2. Hypotension, resolved 3. ESRD on HD Patient Active Problem List Diagnosis Date Noted • Respiratory insufficiency xx/20xx • Septic shock (HCC) xx/20xx • Community acquired bacterial pneumonia xx/20xx Flowsheet Rows Flowsheet Row Most Recent Value Malnutrition Evaluation Does not meet criteria for protein-calorie malnutrition Discharge Vitals: Vitals: xx/20xx BP: Pulse: 100 Resp: 18 Temp: SpO2: 99% Discharge Labs: Lab Results Component Value Date WBC 6.0 xx/20xx HGB 8.8 (L) xx/20xx HCT 25.4 (L) xx/20xx MCV 92 xx/20xx PLT 181 xx/20xx Lab Results Component Value Date GLUCOSE 85 xx/20xx CALCIUM 9.8 xx/20xx NA 133 (L) xx/20xx K 4.0 xx/20xx CO2 23 xx/20xx CL 95 (L) xx/20xx BUN 54 (H) xx/20xx CREATININE 13.0 (H) xx/20xx Discharged Condition: fair Consults: Treatment Team: Consulting Physician: Zzzz, MD Consulting Physician: Zzzz, MD`
 
@@ -237,24 +239,22 @@ record data with an application to the VA million veteran program.
 |Gooden     | 2023-03-12     | New York       | **2023-03-13** |
 |Hernandez  | 2023-04-01     | New York       | **2023-04-02** |
 |Ojeda	    | 2023-06-22     | New York       | **2023-06-23** |
-|Wilson	    | 2023-07-05     | New York       | **2023-07-06** |
 
 
-## Fidelity: What is really happening?[^mat]
+## Both clinics put midnight local time as "checkout," but one reports it in a different time zone(!) [^mat]
 
 |Patient    | Clinic arrival |  Site  | Clinic checkout|
 |-----------|----------------|--------|---------|
-|Scott      | 2023-03-04 11:01 CST   | Houston       | 2023-03-04 23:59 CST |
-|Ryan	    | 2023-04-29 13:40 CDT   | Houston       | 2023-04-29 23:59 CDT |
-|Knepper    | 2023-05-11 10:20 CDT   | Houston       | 2023-05-11 23:59 CDT |
-|Hatcher    | 2023-09-15 09:32 CDT   | Houston       | 2023-09-15 23:59 CDT  |
-|Lanier     | 2023-10-05 12:20 CDT   | Houston       | 2023-10-05 23:59 CDT  |
+|Scott      | 2023-03-04 11:01 CST   | Houston       | 2023-03-04 **23:59** CST |
+|Ryan	    | 2023-04-29 13:40 CDT   | Houston       | 2023-04-29 **23:59** CDT |
+|Knepper    | 2023-05-11 10:20 CDT   | Houston       | 2023-05-11 **23:59** CDT |
+|Hatcher    | 2023-09-15 09:32 CDT   | Houston       | 2023-09-15 **23:59** CDT  |
+|Lanier     | 2023-10-05 12:20 CDT   | Houston       | 2023-10-05 **23:59** CDT  |
 |
 |Strawberry | 2023-02-18 16:44 UTC   | New York       | **2023-02-19** 04:59 UTC |
 |Gooden     | 2023-03-01 17:15 UTC   | New York       | **2023-03-13** 04:59 UTC |
 |Hernandez  | 2023-04-01 13:33 UTC   | New York       | **2023-04-02** 03:59 UTC |
 |Ojeda	    | 2023-06-22 18:09 UTC   | New York       | **2023-06-23** 03:59 UTC |
-|Wilson	    | 2023-07-05 16:40 UTC   | New York       | **2023-07-06** 03:59 UTC |
 
 [^mat]: Matheny M, LeNoue-Newton M. A Comparison of Encounter Data Between VistA/CPRS & the Federal Electronic Health Record (EHR) Systems. *VA HSR Cyberseminar.* 2024-05-22. https://www.hsrd.research.va.gov/cyberseminars/
 
@@ -274,14 +274,14 @@ Learning Isn’t Magic." HMS clinical informatics lecture series,
 
 # Merging fragmented data
 
-## Data integration or harmonization[^nate]
+## Data integration or harmonization: manual or automated[^nate]
 
 ![](nate.png){ height=75% }
 
 [^nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine Learning for Laboratory Data Integration. *Stud Health Technol Inform.* 2019;264:133--137. [PMID: 31437900](https://pubmed.ncbi.nlm.nih.gov/31437900/)
 
 
-## Unexpected data naming: ER discharge against medical advice?
+## Unexpected data naming: I just wanted to find ER discharge against medical advice\ldots
 
 ![](discharge1.png){width=200px} ![](discharge2.png){width=200}\
 
@@ -334,12 +334,12 @@ $(3 \ldots 7) \times 128,000 + 8 \times 9963 + 7 \times 1748 =$
 
 That is *just* to score images for "referable" diabetic retinopathy. The AI can assess no other features of the retina whatsoever.
 
-[^ijta]: Kolomeyer *et al. International Journal of Telemedicine and Applications* 2012.
+[^ijta]: Kolomeyer AM, Nayak NV, Szirth BC, Khouri AS. Fundus autofluorescence imaging in an ocular screening program. *Int J Telemed Appl.* 2012;2012:806464. [PMID: 23316224](https://pubmed.ncbi.nlm.nih.gov/23316224/)
 
-[^gulshan]: Gulshan *et al. JAMA* 2016.
+[^gulshan]: Gulshan V, Peng L, Coram M, *et al.* Development and Validation of a Deep Learning Algorithm for Detection of Diabetic Retinopathy in Retinal Fundus Photographs. *JAMA.* 2016;316(22):2402--2410. [PMID: 27898976](https://pubmed.ncbi.nlm.nih.gov/27898976/)
 
 
-## When data aren't in there
+## When data aren't in the medical record at all
 
 
 You might know\ldots                   But you don't know\ldots
