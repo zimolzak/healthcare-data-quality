@@ -1,0 +1,15 @@
+- flip switch on the repo, on zenodo website.
+- create release on github (pdf is binary), link release to existing 'v1.0' etc tag.
+- wait a bit, click on repo name on zenodo to watch progress.
+- get doi
+- put doi in CITATION.cff (probably use cffinit to edit existing)
+- put doi in badge in README
+- put doi on final slide
+- edit metadata (lots) on zenodo
+- link to pdf in README
+
+pdf link looks something like this:
+
+https://github.com/zimolzak/data-for-health-policy-research/releases/download/v1.0/zimolzak-data-health-policy-2023-12-05.pdf
+
+https://citation-file-format.github.io/cff-initializer-javascript/#/

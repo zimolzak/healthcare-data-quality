@@ -14,8 +14,9 @@ Read slide content in the browser
 
 ## To do
 
-- [ ] go to zenodo, create doi
-    - [ ] insert doi in several docs
-    - [ ] doi badge for readme
-- [ ] render pdf and commit
-- [ ] make a release
+- [x] go to zenodo, create doi
+    - [x] insert doi in several docs
+    - [x] doi badge for readme
+- [x] render pdf for attaching to release
+- [x] make a release
+- [ ] link to pdf in README
