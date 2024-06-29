@@ -1,7 +1,7 @@
 ---
 title: Electronic Health Record Data Quality
 author: Andrew Zimolzak, MD, MMSc
-date: May, 2024
+date: July, 2024
 theme: Goettingen
 fonttheme: structurebold
 colortheme: whale
@@ -143,7 +143,7 @@ Bias              +
 
 
 
-# Data quality applied in practice
+# Completeness
 
 ## One approach (Mini-Sentinel)[^mini]
 
@@ -157,15 +157,15 @@ LOINC is a code that is supposed to take care of this, but\ldots
 
 ### How they follow data quality (sounds like "manually"):
 
-> Checks included assessment of variable completeness, consistency,
-> content, alignment with speciﬁcations, patterns, and trends. Data
+> Checks included assessment of variable **completeness,** consistency,
+> content, **alignment** with speciﬁcations, patterns, and trends. Data
 > distributions are **examined** over time within and between [data]
-> refreshes
+> refreshes.
 
 [^mini]: Raebel MA, Haynes K, Woodworth TS, *et al.* Electronic clinical laboratory test results data tables: lessons from Mini-Sentinel. *Pharmacoepidemiol Drug Saf.* 2014;23(6):609--618. [PMID: 24677577](https://pubmed.ncbi.nlm.nih.gov/24677577/)
 
 
-## Completeness: When lab tests disappear/reappear (Mini-Sentinel)
+## When lab tests disappear/reappear (Mini-Sentinel)
 
 ::: columns
 :::: column
@@ -186,12 +186,52 @@ LOINC is a code that is supposed to take care of this, but\ldots
 :::
 
 
+## Missing data (alco completeness)
+
+- This phenomenon is under-recognized. (Tests get checked for a reason, and more frequently for sick patients.)
+- Potentially massive threat to validity.
+- There is no one right way to handle missing data, but several wrong ways.
+- Detailed methods are out of scope for this talk.
+- "Patient goes out of network" is another form of it (also sometimes under-appreciated).
+
+
+## When data aren't in the medical record at all
+
+You might know\ldots                   But you don't know\ldots
+-----                                  -----
+A medicine was prescribed.             Did the patient fill the prescription?
+The patient filled the prescription.   How many days did the patient miss?
+The patient's ZIP code.                This *individual* patient's income.
+
+
+
+
+# Conformance and "merging" data
+
 ## Lab units (Mini-Sentinel): 12 data partners = 67 units
 
 ![](platelet.png){height=90%}
 
 
-## Plausibility: Statistical approach to data quality in Million Veteran Program[^mvp]
+## Data integration or harmonization: manual or automated[^nate]
+
+![](nate.png){ height=75% }
+
+[^nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine Learning for Laboratory Data Integration. *Stud Health Technol Inform.* 2019;264:133--137. [PMID: 31437900](https://pubmed.ncbi.nlm.nih.gov/31437900/)
+
+
+## Unexpected data naming: I just wanted to find ER discharge against medical advice\ldots
+
+![](discharge1.png){width=200px} ![](discharge2.png){width=200}\
+
+![I'm sorry that I didn't know to look under `EDISTrackingCode`!](discharge3.png){width=300px}
+
+
+
+
+# Plausibility
+
+## Statistical approach to data quality in Million Veteran Program[^mvp]
 
 - Prior work tries to "detect the implausible numbers using prespecified thresholds\ldots."
 
@@ -211,31 +251,26 @@ record data with an application to the VA million veteran program.
 *BMC Med Inform Decis Mak.* 2021;21(1):289. [PMID: 34670548](https://pubmed.ncbi.nlm.nih.gov/34670548/)
 
 
-## Missing data (alco completeness)
-
-- This phenomenon is under-recognized. (Tests get checked for a reason, and more frequently for sick patients.)
-- Potentially massive threat to validity.
-- There is no one right way to handle missing data, but several wrong ways.
-- Detailed methods are out of scope for this talk.
-- "Patient goes out of network" is another form of it (also sometimes under-appreciated).
 
 
-## Fidelity: Rich text note example
+# Correctness
+
+## Example 1: Rich text note A
 
 ![Found on an image search for 'rich text progress note templates'](richtext1.png){ height=75% }
 
 
-## Fidelity: Rich text note example 2
+## Rich text note B
 
 ![](richtext2.png)
 
 
-## Fidelity: How you receive the note (almost no separators!)
+## How you receive the note (almost no separators!)
 
 `Discharge Physician: Ramirez, MD Discharge Diagnosis: 1. Chest pain, resolved 2. Hypotension, resolved 3. ESRD on HD Patient Active Problem List Diagnosis Date Noted • Respiratory insufficiency 06/2024 • Septic shock (HCC) 06/2024 • Community acquired bacterial pneumonia 06/2024 Flowsheet Rows Flowsheet Row Most Recent Value Malnutrition Evaluation Does not meet criteria for protein-calorie malnutrition Discharge Vitals: Vitals: 06/2024 BP: Pulse: 100 Resp: 18 Temp: SpO2: 99% Discharge Labs: Lab Results Component Value Date WBC 6.0 06/2024 HGB 8.8 (L) 06/2024 HCT 25.4 (L) 06/2024 MCV 92 06/2024 PLT 181 06/2024 Lab Results Component Value Date GLUCOSE 85 06/2024 CALCIUM 9.8 06/2024 NA 133 (L) 06/2024 K 4.0 06/2024 CO2 23 06/2024 CL 95 (L) 06/2024 BUN 54 (H) 06/2024 CREATININE 13.0 (H) 06/2024 Discharged Condition: fair Consults: Treatment Team: Consulting Physician: Swift, MD Consulting Physician: Seagraves, MD`
 
 
-## Fidelity: Why does it look like patients stay > 1 day in one of my clinics?
+## Example 2: Why does it look like patients stay > 1 day in one of my clinics?
 
 |Patient    | Clinic arrival |  Site  | Clinic checkout|
 |-----------|----------------|--------|---------|
@@ -251,7 +286,7 @@ record data with an application to the VA million veteran program.
 |Ojeda	    | 2023-06-22     | New York       | **2023-06-23** |
 
 
-## Both clinics put midnight local time as "checkout," but one reports it in a different time zone(!) [^mat]
+## Because both clinics put midnight local time as "checkout," but one reports it in a different time zone(!) [^mat]
 
 |Patient    | Clinic arrival |  Site  | Clinic checkout|
 |-----------|----------------|--------|---------|
@@ -269,7 +304,7 @@ record data with an application to the VA million veteran program.
 [^mat]: Matheny M, LeNoue-Newton M. A Comparison of Encounter Data Between VistA/CPRS & the Federal Electronic Health Record (EHR) Systems. *VA HSR Cyberseminar.* 2024-05-22. https://www.hsrd.research.va.gov/cyberseminars/
 
 
-## Correctness: "Rampant" errors
+## Example 3: "Rampant" errors
 
 > If you don't understand the data generation process, you're gonna miss stuff.
 
@@ -280,25 +315,14 @@ Learning Isn’t Magic." HMS clinical informatics lecture series,
 ![Suspiciously low variability in respiratory rate over several days](somewhatabnormal.png){height=40%}
 
 
-## Data integration or harmonization: manual or automated[^nate]
-
-![](nate.png){ height=75% }
-
-[^nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine Learning for Laboratory Data Integration. *Stud Health Technol Inform.* 2019;264:133--137. [PMID: 31437900](https://pubmed.ncbi.nlm.nih.gov/31437900/)
 
 
-## Unexpected data naming: I just wanted to find ER discharge against medical advice\ldots
-
-![](discharge1.png){width=200px} ![](discharge2.png){width=200}\
-
-![I'm sorry that I didn't know to look under `EDISTrackingCode`!](discharge3.png){width=300px}
-
-
-
-
-# Extracting data from free text & beyond
+# Artificial intelligence for data quality?
 
 ## "Let's just do\ldots"
+
+AI, machine learning, natural language processing, *etc.* for
+extracting data from text & images:
 
 ### Don't assume natural language processing will go according to plan!
 
@@ -312,7 +336,7 @@ information, just like "structured" data.
 
 ## Automated information extraction from text[^ryu]
 
-Rules-based and machine learning approaches work! But the problem was selected carefully.
+**Rules-based and machine learning approaches work!** But the problem was selected carefully.
 
 ![](ryu.jpg){ height=60% }
 
@@ -327,24 +351,14 @@ Labeling data is *expensive!* How did Google/Verily train a convolutional neural
 
 - **476,000 to 989,000** retinal imaging reads
 
-- Assume[^ijta] 44 reads / hour. 5--11 *working years,* or \$1.4--2.8
-**million!** (Before any computing at all. *Just* to score images for
+- Assume[^ijta] 44 reads / hour. 5--11 *working years,* or **\$1.4--2.8
+million!** (Before any computing at all. *Just* to score images for
 "referable" diabetic retinopathy. The AI can assess no other features
 of the retina whatsoever.
 
 [^ijta]: Kolomeyer AM *et al.* *Int J Telemed Appl.* 2012;2012:806464. [PMID: 23316224](https://pubmed.ncbi.nlm.nih.gov/23316224/)
 
 [^gulshan]: Gulshan V, *et al.* *JAMA.* 2016;316(22):2402--2410. [PMID: 27898976](https://pubmed.ncbi.nlm.nih.gov/27898976/)
-
-
-## When data aren't in the medical record at all
-
-
-You might know\ldots                   But you don't know\ldots
------                                  -----
-A medicine was prescribed.             Did the patient fill the prescription?
-The patient filled the prescription.   How many days did the patient miss?
-The patient's ZIP code.                This *individual* patient's income.
 
 
 
@@ -374,6 +388,8 @@ The patient's ZIP code.                This *individual* patient's income.
 - zimolzak@bcm.edu
 
 - Source for this talk (make corrections/suggestions)--- <https://github.com/zimolzak/healthcare-data-quality>
+
+- All PMIDs in slide references should work as hyperlinks.
 
 - This work © 2024 by Andrew Zimolzak is licensed under CC BY-NC-SA 4.0, [click for license details](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
