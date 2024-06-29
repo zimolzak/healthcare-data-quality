@@ -16,8 +16,11 @@ aspectratio: 169
 
 ## Objectives
 
-1. tk
-2. tk
+1. Identify existing data sources, available through Baylor
+Information Technology, that can be used for research or quality
+improvement, and identify methods to access the data.
+
+2. Understand the general processes used to appraise data quality.
 
 
 
