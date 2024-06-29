@@ -329,24 +329,16 @@ Labeling data is *expensive!* How did Google/Verily train a convolutional neural
 
 ![](labeling.png)
 
-$(3 \ldots 7) \times 128,000 + 8 \times 9963 + 7 \times 1748 =$
+- **476,000 to 989,000** retinal imaging reads
 
-**476,000 to 989,000** retinal imaging reads
+- Assume[^ijta] 44 reads / hour. 5--11 *working years,* or \$1.4--2.8
+**million!** (Before any computing at all. *Just* to score images for
+"referable" diabetic retinopathy. The AI can assess no other features
+of the retina whatsoever.
 
+[^ijta]: Kolomeyer AM *et al.* *Int J Telemed Appl.* 2012;2012:806464. [PMID: 23316224](https://pubmed.ncbi.nlm.nih.gov/23316224/)
 
-## Estimated cost of labeling data (Gulshan *et al.*)
-
-- 476,000 to 989,000 retinal imaging reads
-- A random article I found[^ijta] says 44 reads / hour
-- 11k to 22k person-hours
-- 5--11 *working years*
-- 1.4--2.8 **million dollars!** (Before you do any computing at all)
-
-That is *just* to score images for "referable" diabetic retinopathy. The AI can assess no other features of the retina whatsoever.
-
-[^ijta]: Kolomeyer AM, Nayak NV, Szirth BC, Khouri AS. Fundus autofluorescence imaging in an ocular screening program. *Int J Telemed Appl.* 2012;2012:806464. [PMID: 23316224](https://pubmed.ncbi.nlm.nih.gov/23316224/)
-
-[^gulshan]: Gulshan V, Peng L, Coram M, *et al.* Development and Validation of a Deep Learning Algorithm for Detection of Diabetic Retinopathy in Retinal Fundus Photographs. *JAMA.* 2016;316(22):2402--2410. [PMID: 27898976](https://pubmed.ncbi.nlm.nih.gov/27898976/)
+[^gulshan]: Gulshan V, *et al.* *JAMA.* 2016;316(22):2402--2410. [PMID: 27898976](https://pubmed.ncbi.nlm.nih.gov/27898976/)
 
 
 ## When data aren't in the medical record at all
