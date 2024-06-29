@@ -78,6 +78,19 @@ It's not "throwing away outliers."
 
 
 
+# Data at BCM
+
+## Overview
+
+- Baylor Medicine
+- Baylor St.\ Luke's
+- Epic Cosmos
+
+Many other affiliates.
+
+
+
+
 # Data quality frameworks
 
 ## Simple errors (what many people think "data cleaning" is)
