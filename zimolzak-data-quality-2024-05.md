@@ -10,6 +10,20 @@ aspectratio: 169
 
 
 
+
+## Objectives
+
+1. tk
+2. tk
+
+
+## Conflict of interest
+
+None to declare
+
+
+
+
 # Introduction
 
 ## About me
@@ -21,7 +35,7 @@ aspectratio: 169
 | 4   | VA Boston: Clinical trials           | Hospitalist |
 | 5   | BCM & VA Houston: Health services research | Hospitalist |
 
-What is *Clinical research informatics?*
+What is **Clinical research informatics?**
 
 - I make various clinical research studies "go," using existing data.
 - "Phenotyping" using electronic health record **(EHR)** data
@@ -186,7 +200,7 @@ LOINC is a code that is supposed to take care of this, but\ldots
 :::
 
 
-## Missing data (alco completeness)
+## Missing data in general
 
 - This phenomenon is under-recognized. (Tests get checked for a reason, and more frequently for sick patients.)
 - Potentially massive threat to validity.
@@ -208,7 +222,7 @@ The patient's ZIP code.                This *individual* patient's income.
 
 # Conformance and "merging" data
 
-## Lab units (Mini-Sentinel): 12 data partners = 67 units
+## Lab units (Mini-Sentinel): 12 data partners = 67 units!
 
 ![](platelet.png){height=90%}
 
