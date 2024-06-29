@@ -1,6 +1,9 @@
 ---
 title: Electronic Health Record Data Quality
 author: Andrew Zimolzak, MD, MMSc
+institute:
+ - zimolzak@bcm.edu
+ - 'Disclosure: None'
 date: July, 2024
 theme: Goettingen
 fonttheme: structurebold
@@ -15,11 +18,6 @@ aspectratio: 169
 
 1. tk
 2. tk
-
-
-## Conflict of interest
-
-None to declare
 
 
 
