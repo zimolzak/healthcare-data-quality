@@ -1,6 +1,6 @@
 .PHONY: all
 
-all: zimolzak-data-quality-2024-05.pdf zimolzak-data-quality-2024-05.pptx
+all: zimolzak-data-quality-2024.pdf zimolzak-data-quality-2024.pptx
 
 %.pdf: %.md
 	pandoc -t beamer $< -o $@
