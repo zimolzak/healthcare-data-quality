@@ -13,7 +13,6 @@ aspectratio: 169
 
 
 
-
 ## Objectives
 
 1. Identify existing data sources, available through Baylor
