@@ -47,7 +47,7 @@ What is **Clinical research informatics?**
 [^MIT]: MIT Critical Data. *Secondary Analysis of Electronic Health Records.*
 Springer; 2016. [Click for **free** access!](https://link.springer.com/book/10.1007/978-3-319-43742-2)
 
-![](book.jpg){ height=75% }
+![](img/book.jpg){ height=75% }
 
 
 ## Layers of data quality (where things can go wrong)
@@ -97,10 +97,10 @@ Many other affiliates.
 
 ::: columns
 :::: column
-![28 inches is a plausible length for a 6--13 month-old, not a retired veteran](72cm.jpg)
+![28 inches is a plausible length for a 6--13 month-old, not a retired veteran](img/72cm.jpg)
 ::::
 :::: column
-![Are you sure you want to correct the BMI = 4484?](5-9inch.jpg)
+![Are you sure you want to correct the BMI = 4484?](img/5-9inch.jpg)
 ::::
 :::
 
@@ -197,7 +197,7 @@ LOINC is a code that is supposed to take care of this, but\ldots
 
 ::: columns
 :::: column
-![](inr-down-up.jpg){ height=75% }
+![](img/inr-down-up.jpg){ height=75% }
 ::::
 :::: column
 
@@ -238,21 +238,21 @@ The patient's ZIP code.                This *individual* patient's income.
 
 ## Lab units (Mini-Sentinel): 12 data partners = 67 units!
 
-![](platelet.png){height=90%}
+![](img/platelet.png){height=90%}
 
 
 ## Data integration or harmonization: manual or automated[^nate]
 
-![](nate.png){ height=75% }
+![](img/nate.png){ height=75% }
 
 [^nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine Learning for Laboratory Data Integration. *Stud Health Technol Inform.* 2019;264:133--137. [PMID: 31437900](https://pubmed.ncbi.nlm.nih.gov/31437900/)
 
 
 ## Unexpected data naming: I just wanted to find ER discharge against medical advice\ldots
 
-![](discharge1.png){width=200px} ![](discharge2.png){width=200}\
+![](img/discharge1.png){width=200px} ![](img/discharge2.png){width=200}\
 
-![I'm sorry that I didn't know to look under `EDISTrackingCode`!](discharge3.png){width=300px}
+![I'm sorry that I didn't know to look under `EDISTrackingCode`!](img/discharge3.png){width=300px}
 
 
 
@@ -285,12 +285,12 @@ record data with an application to the VA million veteran program.
 
 ## Example 1: Rich text note A
 
-![Found on an image search for 'rich text progress note templates'](richtext1.png){ height=75% }
+![Found on an image search for 'rich text progress note templates'](img/richtext1.png){ height=75% }
 
 
 ## Rich text note B
 
-![](richtext2.png)
+![](img/richtext2.png)
 
 
 ## How you receive the note (almost no separators!)
@@ -314,7 +314,7 @@ record data with an application to the VA million veteran program.
 |Ojeda	    | 2023-06-22     | New York       | **2023-06-23** |
 
 
-## Because both clinics put midnight local time as "checkout," but one reports it in a different time zone(!) [^mat]
+## Both clinics put midnight local time as "checkout," but one reports it in a different time zone(!) [^mat]
 
 |Patient    | Clinic arrival |  Site  | Clinic checkout|
 |-----------|----------------|--------|---------|
@@ -340,7 +340,7 @@ record data with an application to the VA million veteran program.
 Learning Isn’t Magic." HMS clinical informatics lecture series,
 2018-04-24.
 
-![Suspiciously low variability in respiratory rate over several days](somewhatabnormal.png){height=40%}
+![Suspiciously low variability in respiratory rate over several days](img/somewhatabnormal.png){height=40%}
 
 
 
@@ -366,7 +366,7 @@ information, just like "structured" data.
 
 **Rules-based and machine learning approaches work!** But the problem was selected carefully.
 
-![](ryu.jpg){ height=60% }
+![](img/ryu.jpg){ height=60% }
 
 [^ryu]: Ryu JH, Zimolzak AJ. Natural Language Processing of Serum Protein Electrophoresis Reports in the Veterans Affairs Health Care System. *JCO Clin Cancer Inform.* 2020;4:749--756. [PMID: 32813561](https://pubmed.ncbi.nlm.nih.gov/32813561/)
 
@@ -375,7 +375,7 @@ information, just like "structured" data.
 
 Labeling data is *expensive!* How did Google/Verily train a convolutional neural net to interpret retinal fundus photographs?[^gulshan]
 
-![](labeling.png)
+![](img/labeling.png)
 
 - **476,000 to 989,000** retinal imaging reads
 
