@@ -79,11 +79,11 @@ It's not "throwing away outliers."
 
 ## Data quality frameworks: General references
 
-Early frameworks[^weis] described five domains of data quality: completeness, correctness,
-concordance, plausibility, and currency.
+An early framework[^weis] described five domains of data quality:
+**completeness, correctness, concordance, plausibility, and
+currency.**
 
-There are several literature
-reviews.[^lit]
+There are several reviews of data quality literature.[^lit]
 
 [^lit]: Liaw ST, Guo JGN, Ansari S, *et al.* Quality assessment of real-world data repositories across the data life cycle: A literature review. *J Am Med Inform Assoc.* 2021;28(7):1591--1599. [PMID: 33496785](https://pubmed.ncbi.nlm.nih.gov/33496785/)
 
@@ -109,9 +109,11 @@ However, the authors observe that there is no "standard approach for assessing E
 
 ## More approaches
 
-Three categories of data quality described in a 2016 paper: conformance, completeness,
-plausibility.[^kahn] And five categories in a 2018 paper: accuracy, completeness,
-consistency, credibility, and timeliness.[^feder] The latter paper also describes a straightforward list of "Approaches for quality appraisal:"
+Three categories of data quality described in a 2016 paper:
+conformance, completeness, plausibility.[^kahn] And five categories in
+a 2018 paper: **accuracy,** completeness, **consistency, credibility,
+and timeliness.**[^feder] The latter paper also describes a
+straightforward list of "approaches for quality appraisal:"
 
 - Data validation with data rules
 - Verification of abstraction with statistical measures
@@ -139,7 +141,9 @@ Bias              +
 **Completeness and plausibility seem to be everyone's favorites!**
 
 
-# Data quality, advanced
+
+
+# Data quality applied in practice
 
 ## One approach (Mini-Sentinel)[^mini]
 
@@ -158,38 +162,44 @@ LOINC is a code that is supposed to take care of this, but\ldots
 > distributions are **examined** over time within and between [data]
 > refreshes
 
-
 [^mini]: Raebel MA, Haynes K, Woodworth TS, *et al.* Electronic clinical laboratory test results data tables: lessons from Mini-Sentinel. *Pharmacoepidemiol Drug Saf.* 2014;23(6):609--618. [PMID: 24677577](https://pubmed.ncbi.nlm.nih.gov/24677577/)
 
 
-## When lab tests disappear/reappear (Mini-Sentinel)
-
+## Completeness: When lab tests disappear/reappear (Mini-Sentinel)
 
 ::: columns
 :::: column
 ![](inr-down-up.jpg){ height=75% }
 ::::
 :::: column
-- Number of INR lab tests suddenly dropped $18,000 \to 15,000$ one year. (System started storing as plain text.)
 
-- Then suddenly $18,000 \to 24,000$ a few years later. (Clinic started importing data from hospital.)
+- Number of INR lab tests suddenly dropped $18,000 \to 15,000$ one
+  year. Why? **System started storing as plain text.**
+
+- Then suddenly $18,000 \to 24,000$ a few years later. Why? **Clinic
+  started importing data from the hospital.**
+
+- Don't build the data-gathering system and walk away, assuming
+  nothing will change.
+
 ::::
 :::
 
-## A bit of a mess (Mini-Sentinel)
+
+## Lab units (Mini-Sentinel): 12 data partners = 67 units
 
 ![](platelet.png){height=90%}
 
 
-## Statistical approach to data quality in Million Veteran Program[^mvp]
+## Plausibility: Statistical approach to data quality in Million Veteran Program[^mvp]
 
 - Prior work tries to "detect the implausible numbers using prespecified thresholds\ldots."
 
 - Domains: conformance, completeness, and plausibility
 
-- Improved plausibility score by testing height and weight correlation
-  with past values *for that patient.* Exponentially weighted moving
-  average.
+- Improved plausibility score by testing **height and weight
+  correlation with past values for that patient.** Exponentially
+  weighted moving average.
 
 - This approach had fewer false positives, higher power, higher
   positive and negative predictive value, compared to the "population
@@ -201,9 +211,9 @@ record data with an application to the VA million veteran program.
 *BMC Med Inform Decis Mak.* 2021;21(1):289. [PMID: 34670548](https://pubmed.ncbi.nlm.nih.gov/34670548/)
 
 
-## Missing data
+## Missing data (alco completeness)
 
-- Under-recognized. (Tests get checked for a reason, and more frequently for sick patients.)
+- This phenomenon is under-recognized. (Tests get checked for a reason, and more frequently for sick patients.)
 - Potentially massive threat to validity.
 - There is no one right way to handle missing data, but several wrong ways.
 - Detailed methods are out of scope for this talk.
@@ -222,10 +232,10 @@ record data with an application to the VA million veteran program.
 
 ## Fidelity: How you receive the note (almost no separators!)
 
-`Discharge Physician: Zzzz, MD Discharge Diagnosis: 1. Chest pain, resolved 2. Hypotension, resolved 3. ESRD on HD Patient Active Problem List Diagnosis Date Noted • Respiratory insufficiency xx/20xx • Septic shock (HCC) xx/20xx • Community acquired bacterial pneumonia xx/20xx Flowsheet Rows Flowsheet Row Most Recent Value Malnutrition Evaluation Does not meet criteria for protein-calorie malnutrition Discharge Vitals: Vitals: xx/20xx BP: Pulse: 100 Resp: 18 Temp: SpO2: 99% Discharge Labs: Lab Results Component Value Date WBC 6.0 xx/20xx HGB 8.8 (L) xx/20xx HCT 25.4 (L) xx/20xx MCV 92 xx/20xx PLT 181 xx/20xx Lab Results Component Value Date GLUCOSE 85 xx/20xx CALCIUM 9.8 xx/20xx NA 133 (L) xx/20xx K 4.0 xx/20xx CO2 23 xx/20xx CL 95 (L) xx/20xx BUN 54 (H) xx/20xx CREATININE 13.0 (H) xx/20xx Discharged Condition: fair Consults: Treatment Team: Consulting Physician: Zzzz, MD Consulting Physician: Zzzz, MD`
+`Discharge Physician: Ramirez, MD Discharge Diagnosis: 1. Chest pain, resolved 2. Hypotension, resolved 3. ESRD on HD Patient Active Problem List Diagnosis Date Noted • Respiratory insufficiency 06/2024 • Septic shock (HCC) 06/2024 • Community acquired bacterial pneumonia 06/2024 Flowsheet Rows Flowsheet Row Most Recent Value Malnutrition Evaluation Does not meet criteria for protein-calorie malnutrition Discharge Vitals: Vitals: 06/2024 BP: Pulse: 100 Resp: 18 Temp: SpO2: 99% Discharge Labs: Lab Results Component Value Date WBC 6.0 06/2024 HGB 8.8 (L) 06/2024 HCT 25.4 (L) 06/2024 MCV 92 06/2024 PLT 181 06/2024 Lab Results Component Value Date GLUCOSE 85 06/2024 CALCIUM 9.8 06/2024 NA 133 (L) 06/2024 K 4.0 06/2024 CO2 23 06/2024 CL 95 (L) 06/2024 BUN 54 (H) 06/2024 CREATININE 13.0 (H) 06/2024 Discharged Condition: fair Consults: Treatment Team: Consulting Physician: Swift, MD Consulting Physician: Seagraves, MD`
 
 
-## Fidelity: Why does one clinic look like patients stay > 1 day?
+## Fidelity: Why does it look like patients stay > 1 day in one of my clinics?
 
 |Patient    | Clinic arrival |  Site  | Clinic checkout|
 |-----------|----------------|--------|---------|
@@ -259,7 +269,7 @@ record data with an application to the VA million veteran program.
 [^mat]: Matheny M, LeNoue-Newton M. A Comparison of Encounter Data Between VistA/CPRS & the Federal Electronic Health Record (EHR) Systems. *VA HSR Cyberseminar.* 2024-05-22. https://www.hsrd.research.va.gov/cyberseminars/
 
 
-## "Rampant" errors
+## Correctness: "Rampant" errors
 
 > If you don't understand the data generation process, you're gonna miss stuff.
 
@@ -301,7 +311,7 @@ Learning Isn’t Magic." HMS clinical informatics lecture series,
 - Notes have typos, nonstandard abbreviations, and incorrect
 information, just like "structured" data.
 
-- Not typos but transcription (or other) errors, nearly undetectable to untrained: "Intrathecal DepoCyt" $\to$ "Intrathecal etoposide"
+- Not typos but transcription (or other) errors, nearly undetectable to the untrained: "Intrathecal DepoCyt" $\to$ "Intrathecal etoposide"
 
 
 ## Automated information extraction from text[^ryu]
