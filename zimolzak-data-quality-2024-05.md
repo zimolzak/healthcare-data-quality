@@ -10,7 +10,7 @@ aspectratio: 169
 
 
 
-# Intro
+# Introduction
 
 ## About me
 
@@ -279,10 +279,6 @@ Learning Isn’t Magic." HMS clinical informatics lecture series,
 
 ![Suspiciously low variability in respiratory rate over several days](somewhatabnormal.png){height=40%}
 
-
-
-
-# Merging fragmented data
 
 ## Data integration or harmonization: manual or automated[^nate]
 
