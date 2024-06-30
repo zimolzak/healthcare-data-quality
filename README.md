@@ -11,7 +11,7 @@ Lecture prepapred 2024-07-01
 
 PDF slide presentation
 [here](https://github.com/zimolzak/healthcare-data-quality/releases/download/v1.1/zimolzak-data-quality-2024-05.pdf).
-(May be out of date if a new PDF has not been created from source recently.)
+(Best formatting, but may be out of date if a new PDF has not been created from source recently.)
 
 Read slide content in the browser
-[here](https://github.com/zimolzak/healthcare-data-quality/blob/main/zimolzak-data-quality-2024.md).
+[here](https://github.com/zimolzak/healthcare-data-quality/blob/main/zimolzak-data-quality-2024.md). (Formatting may be imperfect, but it will always be updated, and reference links should work well.)

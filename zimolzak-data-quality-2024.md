@@ -147,10 +147,6 @@ Bias              +
 
 # Domain: Completeness
 
-
-[^mini]: Raebel MA, Haynes K, Woodworth TS, *et al.* Electronic clinical laboratory test results data tables: lessons from Mini-Sentinel. *Pharmacoepidemiol Drug Saf.* 2014;23(6):609--618. [PMID: 24677577](https://pubmed.ncbi.nlm.nih.gov/24677577/)
-
-
 ## When lab tests disappear/reappear (Mini-Sentinel)[^mini]
 
 ::: columns
@@ -170,6 +166,8 @@ Bias              +
 
 ::::
 :::
+
+[^mini]: Raebel MA, Haynes K, Woodworth TS, *et al.* Electronic clinical laboratory test results data tables: lessons from Mini-Sentinel. *Pharmacoepidemiol Drug Saf.* 2014;23(6):609--618. [PMID: 24677577](https://pubmed.ncbi.nlm.nih.gov/24677577/)
 
 
 ## Missing data in general
