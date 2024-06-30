@@ -35,7 +35,7 @@ D. incorrect because data cleaning can be accomplished with some effort, but it 
 
 # Question 2
 
-Stem text here.
+FIXME SOMETHING ABOUT BCM DATA
 
 A. one
 
@@ -56,7 +56,7 @@ Option A is incorrect because this. Option C is wrong because okay.
 
 # Question 3
 
-Stem text here.
+FIXME Which of the following is **NOT** a problem with data completeness?
 
 A. one
 
@@ -77,7 +77,7 @@ Option A is incorrect because this. Option C is wrong because okay.
 
 # Question 4
 
-Stem text here.
+FIXME Stem text here.
 
 A. one
 
@@ -96,10 +96,9 @@ Option A is incorrect because this. Option C is wrong because okay.
 
 
 
-
 # Misc
 
 for Q 1 other untrue statements:
 
-- one time thing
-- means one thing to all people
+- data cleaning is a one time thing
+- data cleaning means one thing to all people

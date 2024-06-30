@@ -82,11 +82,21 @@ It's not "throwing away outliers."
 
 ## Overview
 
-- Baylor Medicine
-- Baylor St.\ Luke's
-- Epic Cosmos
+### Baylor Medicine
 
-Many other affiliates.
+- tk
+
+### Baylor St.\ Luke's
+
+- tk
+
+### Epic Cosmos
+
+- tk
+
+### Many other affiliates.
+
+- tk
 
 
 
