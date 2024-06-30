@@ -84,19 +84,19 @@ It's not "throwing away outliers."
 
 ### Baylor Medicine
 
-- tk
+- FIXME
 
 ### Baylor St.\ Luke's
 
-- tk
+- FIXME
 
 ### Epic Cosmos
 
-- tk
+- FIXME
 
 ### Many other affiliates.
 
-- tk
+- FIXME
 
 
 
@@ -150,7 +150,7 @@ Currency          +              +                 +
 Conformance       +                       +                        +
 Bias              +
 
-**Completeness and plausibility seem to be everyone's favorites** across this table!**
+**Completeness and plausibility seem to be everyone's favorites** across this table!
 
 
 

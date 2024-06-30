@@ -43,6 +43,7 @@ B. other
 
 C. this
 
+
 ## Solution
 
 The correct answer is B. other
@@ -64,6 +65,7 @@ B. other
 
 C. this
 
+
 ## Solution
 
 The correct answer is B. other
@@ -77,23 +79,36 @@ Option A is incorrect because this. Option C is wrong because okay.
 
 # Question 4
 
-FIXME Stem text here.
+Which of the following is **NOT** a commonly described domain of data quality?
 
-A. one
+A. Plausibility
 
-B. other
+B. Completeness
 
-C. this
+C. Conciseness
+
+D. Conformance
+
+E. Correctness
+
 
 ## Solution
 
-The correct answer is B. other
+The correct answer is C, Conciseness.
 
-This is true because, reasons
+A. Plausibility has been defined as "the extent to which EHR data make
+sense in a larger medical context." (Lewis *et al., J Am Med Inform
+Assoc.* 30:1730. PMID 37390812) This is one of the more common
+dimensions assessed by multiple papers.
 
-Option A is incorrect because this. Option C is wrong because okay.
+B. Completeness is defined simply as "the presence of data in the
+EHR." This is the most commonly assessed dimension of data quality.
 
+C. Conciseness is not mentioned in any of the lecture materials or papers cited.
 
+D. Conformance means "agreement with predefined formatting constraints," such as standardizing lab tests to the same units, or having only a short list of allowed units.
+
+E. Correctness is "the truthfulness of data in the EHR."
 
 
 # Misc
