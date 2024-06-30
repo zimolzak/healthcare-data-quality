@@ -45,7 +45,7 @@ What is **Clinical research informatics?**
 ## A detailed reference about secondary use[^MIT]
 
 [^MIT]: MIT Critical Data. *Secondary Analysis of Electronic Health Records.*
-Springer; 2016. [Click for **free** access!](https://link.springer.com/book/10.1007/978-3-319-43742-2)
+Springer; 2016. [**Click here** for free access!](https://link.springer.com/book/10.1007/978-3-319-43742-2)
 
 ![](img/book.jpg){ height=75% }
 
