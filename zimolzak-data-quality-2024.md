@@ -370,21 +370,29 @@ of the retina whatsoever.)
 
 
 
-# Conclusions
+# Conclusion
 
 ## Reusing EHR data is not what you may think\ldots
 
-- **Correctness, Plausibility:** Well-meaning people enter the wrong number.
-- **Correctness:** People "just click through" because they're so busy.
-- **Correctness:** It's surprisingly hard to "prove" some data right/wrong.
-- **Completeness:** Medical testing is *extremely* non-random!
-- **Conformance:** Just because the table is named `procedures` doesn't mean\ldots
-- **Conformance:** The data may be "in there" but hard to get.
-- **Completeness:** The data may not be "in there" at all (system was not designed for it).
+### Correctness
 
-\ldots and yet, people manage to use EHR data for research!
+- Well-meaning people enter the wrong number. (Plausibility, too)
+- People "just click through" because they're so busy.
+- It's surprisingly hard to "prove" some data right/wrong.
 
-### If you never tried swimming, don't jump in the deep end without a lifeguard.
+### Completeness
+
+- Medical testing is *extremely* non-random!
+- The data may not be "in there" at all (system was not designed for it).
+
+### Conformance
+
+- Just because the table is named `procedures` doesn't mean\ldots
+- The data may be "in there" but hard to get.
+
+### And yet\ldots
+
+People manage to use EHR data for research! **If you never tried swimming, don't jump in the deep end without a lifeguard.**
 
 
 ## Thank you!
@@ -397,6 +405,6 @@ of the retina whatsoever.)
 
 - All PMIDs in slide references should work as hyperlinks.
 
-- This work © 2024 by Andrew Zimolzak is licensed under CC BY-NC-SA 4.0, [click for license details](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- This work © 2024 by Andrew Zimolzak is licensed under CC BY-NC-SA 4.0. [Click for license details.](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-- Cite using doi:10.5281/zenodo.11393189
+- Cite using [doi:10.5281/zenodo.11393189](https://zenodo.org/records/11393189)
