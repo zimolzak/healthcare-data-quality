@@ -140,7 +140,7 @@ Currency          +              +                 +
 Conformance       +                       +                        +
 Bias              +
 
-**Completeness and plausibility seem to be everyone's favorites!**
+**Completeness and plausibility seem to be everyone's favorites** across this table!**
 
 
 

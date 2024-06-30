@@ -14,14 +14,4 @@ PDF slide presentation
 (May be out of date if a new PDF has not been created from source recently.)
 
 Read slide content in the browser
-[here](https://github.com/zimolzak/healthcare-data-quality/blob/main/zimolzak-data-quality-2024-05.md).
-
-
-## To do
-
-- [x] go to zenodo, create doi
-    - [x] insert doi in several docs
-    - [x] doi badge for readme
-- [x] render pdf for attaching to release
-- [x] make a release
-- [x] link to pdf in README
+[here](https://github.com/zimolzak/healthcare-data-quality/blob/main/zimolzak-data-quality-2024.md).
