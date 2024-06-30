@@ -58,7 +58,7 @@ From "little picture" to big picture:
     - occasional errors, typos, misunderstandings, *etc.*
     - low fidelity extraction
     - missing or highly missing
-    - rampant errors or "practically lies"
+    - rampant errors
 2. Data exist but are called 130 different things.
 3. Data fields are called misleading things (names don't mean what clinicians think)
 4. Data exist only in "free text"
@@ -279,59 +279,14 @@ go down to 1 example (good note, bad note)
 `Discharge Physician: Ramirez, MD Discharge Diagnosis: 1. Chest pain, resolved 2. Hypotension, resolved 3. ESRD on HD Patient Active Problem List Diagnosis Date Noted • Respiratory insufficiency 06/2024 • Septic shock (HCC) 06/2024 • Community acquired bacterial pneumonia 06/2024 Flowsheet Rows Flowsheet Row Most Recent Value Malnutrition Evaluation Does not meet criteria for protein-calorie malnutrition Discharge Vitals: Vitals: 06/2024 BP: Pulse: 100 Resp: 18 Temp: SpO2: 99% Discharge Labs: Lab Results Component Value Date WBC 6.0 06/2024 HGB 8.8 (L) 06/2024 HCT 25.4 (L) 06/2024 MCV 92 06/2024 PLT 181 06/2024 Lab Results Component Value Date GLUCOSE 85 06/2024 CALCIUM 9.8 06/2024 NA 133 (L) 06/2024 K 4.0 06/2024 CO2 23 06/2024 CL 95 (L) 06/2024 BUN 54 (H) 06/2024 CREATININE 13.0 (H) 06/2024 Discharged Condition: fair Consults: Treatment Team: Consulting Physician: Swift, MD Consulting Physician: Seagraves, MD`
 
 
-## Example 2: Why does it look like patients stay > 1 day in one of my clinics?
-
-|Patient    | Clinic arrival |  Site  | Clinic checkout|
-|-----------|----------------|--------|---------|
-|Scott      | 2023-03-04     | Houston       | 2023-03-04 |
-|Ryan	    | 2023-04-29     | Houston       | 2023-04-29 |
-|Knepper    | 2023-05-11     | Houston       | 2023-05-11 |
-|Hatcher    | 2023-09-15     | Houston       | 2023-09-15 |
-|Lanier     | 2023-10-05     | Houston       | 2023-10-05 |
-|
-|Strawberry | 2023-02-18     | New York       | **2023-02-19** |
-|Gooden     | 2023-03-12     | New York       | **2023-03-13** |
-|Hernandez  | 2023-04-01     | New York       | **2023-04-02** |
-|Ojeda	    | 2023-06-22     | New York       | **2023-06-23** |
-
-
-## Both clinics put midnight local time as "checkout," but one reports it in a different time zone(!) [^mat]
-
-|Patient    | Clinic arrival |  Site  | Clinic checkout|
-|-----------|----------------|--------|---------|
-|Scott      | 2023-03-04 11:01 CST   | Houston       | 2023-03-04 **23:59** CST |
-|Ryan	    | 2023-04-29 13:40 CDT   | Houston       | 2023-04-29 **23:59** CDT |
-|Knepper    | 2023-05-11 10:20 CDT   | Houston       | 2023-05-11 **23:59** CDT |
-|Hatcher    | 2023-09-15 09:32 CDT   | Houston       | 2023-09-15 **23:59** CDT  |
-|Lanier     | 2023-10-05 12:20 CDT   | Houston       | 2023-10-05 **23:59** CDT  |
-|
-|Strawberry | 2023-02-18 16:44 UTC   | New York       | **2023-02-19** 04:59 UTC |
-|Gooden     | 2023-03-01 17:15 UTC   | New York       | **2023-03-13** 04:59 UTC |
-|Hernandez  | 2023-04-01 13:33 UTC   | New York       | **2023-04-02** 03:59 UTC |
-|Ojeda	    | 2023-06-22 18:09 UTC   | New York       | **2023-06-23** 03:59 UTC |
-
-[^mat]: Matheny M, LeNoue-Newton M. A Comparison of Encounter Data Between VistA/CPRS & the Federal Electronic Health Record (EHR) Systems. *VA HSR Cyberseminar.* 2024-05-22. https://www.hsrd.research.va.gov/cyberseminars/
-
-
-## Example 3: "Rampant" errors
-
-> If you don't understand the data generation process, you're gonna miss stuff.
-
----David Adams, PhD (Sr.\ software engineer at Verily). "Machine
-Learning Isn’t Magic." HMS clinical informatics lecture series,
-2018-04-24.
-
-![Suspiciously low variability in respiratory rate over several days](img/somewhatabnormal.png){height=40%}
-
-
 
 
 # Artificial intelligence for data quality?
 
 ## "Let's just do\ldots"
 
-AI, machine learning, natural language processing, *etc.* for
-extracting data from text & images:
+AI, machine learning, natural language processing, *etc.,* for
+improving **completeness* by extracting data from text & images:
 
 ### Don't assume natural language processing will go according to plan!
 
