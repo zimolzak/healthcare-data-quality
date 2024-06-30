@@ -4,9 +4,14 @@
 
 Andrew Zimolzak, MD, MMSc
 
-Lecture prepapred 2024-05-28
+Lecture prepapred 2024-07-01
+
 
 ## Slides
+
+PDF slide presentation
+[here](https://github.com/zimolzak/healthcare-data-quality/releases/download/v1.1/zimolzak-data-quality-2024-05.pdf).
+(May be out of date if a new PDF has not been created from source recently.)
 
 Read slide content in the browser
 [here](https://github.com/zimolzak/healthcare-data-quality/blob/main/zimolzak-data-quality-2024-05.md).
@@ -19,4 +24,4 @@ Read slide content in the browser
     - [x] doi badge for readme
 - [x] render pdf for attaching to release
 - [x] make a release
-- [ ] link to pdf in README
+- [x] link to pdf in README
