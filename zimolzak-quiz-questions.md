@@ -2,23 +2,33 @@
 % Andrew Zimolzak, MD, MMSc
 % 2024
 
+
+
+
 # Question 1
 
-Stem text here.
+Data "cleaning" is (choose **all** that apply):
 
-A. one
+A. usually not appropriate to pursue, because the "raw" data is the most faithful to the true clincal situation.
 
-B. other
+B. straightforward, because it can always be compared to an external, gold standard source of truth.
 
-C. this
+C. mostly complete after we have excluded outliers that are not compatible with physiology, *e.g.,* weight 950 kg, or diastolic blood pressure 800 mmHg.
+
+D. not practical for electronic health record data, because not
+
 
 ## Solution
 
-The correct answer is B. other
+None of the choices should be selected.
 
-This is true because, reasons
+A. incorrect because data cleaning usually *should* be performed. Some analyses are not possible at all without some form of data cleaning. The process should not introduce any inaccuracy but aims to transform the data from a format used for patient care to a format useful for analysis.
 
-Option A is incorrect because this. Option C is wrong because okay.
+B. incorrect because an external source is *sometimes* but not *usually* available to corroborate data elements. Usually we have only one set of measurements per patient at a time point, and we don't know for certain whether they are correct.
+
+C. Incorrect because this addresses only *plausibility.* Other key domains of data quality include *completeness* (what if data are missing or never collected) and *conformance* (data all using the same "language" to describe the same things).
+
+D. incorrect because data cleaning can be accomplished with some effort, but it is not impractical or impossible.
 
 
 
@@ -82,3 +92,14 @@ The correct answer is B. other
 This is true because, reasons
 
 Option A is incorrect because this. Option C is wrong because okay.
+
+
+
+
+
+# Misc
+
+for Q 1 other untrue statements:
+
+- one time thing
+- means one thing to all people
