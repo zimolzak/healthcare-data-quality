@@ -259,7 +259,7 @@ record data with an application to the VA million veteran program.
 
 # Domain: Correctness
 
-## Example: Rich text note (not real patient/doctor names)
+## Example: Rich text note (not real names/dates)
 
 ![](img/richtext-simulated.png){ height=90% }
 
