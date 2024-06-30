@@ -1,9 +1,8 @@
 .PHONY: all clean
 
-files = zimolzak-data-quality-2024.pdf zimolzak-data-quality-2024.pptx
+files = zimolzak-quiz-questions.docx
 
 all: $(files)
-	make -C img
 
 %.pdf: %.md
 	pandoc -t beamer $< -o $@
@@ -16,4 +15,3 @@ all: $(files)
 
 clean:
 	rm -f $(files)
-	make -C img clean
