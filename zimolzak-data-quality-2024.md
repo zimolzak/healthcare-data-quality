@@ -259,19 +259,9 @@ record data with an application to the VA million veteran program.
 
 # Domain: Correctness
 
-## FIXME
+## Example: Rich text note (not real patient/doctor names)
 
-go down to 1 example (good note, bad note)
-
-
-## Example 1: Rich text note A
-
-![Found on an image search for 'rich text progress note templates'](img/richtext1.png){ height=75% }
-
-
-## Rich text note B
-
-![](img/richtext2.png)
+![](img/richtext-simulated.png){ height=90% }
 
 
 ## How you receive the note (almost no separators!)
@@ -286,7 +276,7 @@ go down to 1 example (good note, bad note)
 ## "Let's just do\ldots"
 
 AI, machine learning, natural language processing, *etc.,* for
-improving **completeness* by extracting data from text & images:
+improving **completeness** by extracting data from text & images:
 
 ### Don't assume natural language processing will go according to plan!
 
@@ -344,7 +334,7 @@ of the retina whatsoever.)
 
 ### Conformance
 
-- Just because the table is named `procedures` doesn't mean\ldots
+- Just because the table is named `DischargeType` doesn't mean\ldots
 - The data may be "in there" but hard to get.
 
 ### And yet\ldots
