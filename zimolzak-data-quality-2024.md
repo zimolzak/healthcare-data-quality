@@ -119,7 +119,7 @@ However, the authors observe that there is no "standard approach for assessing E
 - Conformance
 - Bias
 
-Other frameworks[^weis] and reviews[^lit] don't always include the same domains.
+Other frameworks[^weis] and reviews[^lit] may not include the same exact domains.
 
 [^seven]: Lewis AE, *et al.* Electronic health record data quality assessment and tools: a systematic review. *J Am Med Inform Assoc.* 2023;30(10):1730--1740. [PMID: 37390812](https://pubmed.ncbi.nlm.nih.gov/37390812/)
 
@@ -147,27 +147,11 @@ Bias              +
 
 # Domain: Completeness
 
-## One approach (Mini-Sentinel)[^mini]
-
-### It was harder than they expected to "just merge labs" from data partners.
-
-LOINC is a code that is supposed to take care of this, but\ldots
-
-> [S]ome data partners found LOINC associated with essentially all
-> results, others had LOINC associated with some results, and others
-> found **no LOINC in source data.**
-
-### How they follow data quality (sounds like "manually"):
-
-> Checks included assessment of variable **completeness,** consistency,
-> content, **alignment** with speciﬁcations, patterns, and trends. Data
-> distributions are **examined** over time within and between [data]
-> refreshes.
 
 [^mini]: Raebel MA, Haynes K, Woodworth TS, *et al.* Electronic clinical laboratory test results data tables: lessons from Mini-Sentinel. *Pharmacoepidemiol Drug Saf.* 2014;23(6):609--618. [PMID: 24677577](https://pubmed.ncbi.nlm.nih.gov/24677577/)
 
 
-## When lab tests disappear/reappear (Mini-Sentinel)
+## When lab tests disappear/reappear (Mini-Sentinel)[^mini]
 
 ::: columns
 :::: column
@@ -210,16 +194,34 @@ The patient's ZIP code.                This *individual* patient's income.
 
 # Domain: Conformance
 
-## Data "merging" or harmonization: manual or automated[^nate]
+## One approach (Mini-Sentinel)[^mini]
 
-![](img/nate.png){ height=75% }
+### It was harder than they expected to "just merge labs" from data partners.
 
-[^nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine Learning for Laboratory Data Integration. *Stud Health Technol Inform.* 2019;264:133--137. [PMID: 31437900](https://pubmed.ncbi.nlm.nih.gov/31437900/)
+LOINC is a code that is supposed to take care of this, but\ldots
+
+> [S]ome data partners found LOINC associated with essentially all
+> results, others had LOINC associated with some results, and others
+> found **no LOINC in source data.**
+
+### How they follow data quality (sounds like "manually"):
+
+> Checks included assessment of variable **completeness,** consistency,
+> content, **alignment** with speciﬁcations, patterns, and trends. Data
+> distributions are **examined** over time within and between [data]
+> refreshes.
 
 
 ## Lab units (Mini-Sentinel): 12 data partners = 67 units!
 
 ![](img/platelet.png){height=90%}
+
+
+## Data "merging" or harmonization: manual or automated[^nate]
+
+![](img/nate.png){ height=75% }
+
+[^nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine Learning for Laboratory Data Integration. *Stud Health Technol Inform.* 2019;264:133--137. [PMID: 31437900](https://pubmed.ncbi.nlm.nih.gov/31437900/)
 
 
 ## Unexpected data naming: I just wanted to find ER discharge against medical advice\ldots
@@ -235,7 +237,7 @@ The patient's ZIP code.                This *individual* patient's income.
 
 ## Statistical approach to data quality in the Million Veteran Program[^mvp]
 
-- Prior work tries to "detect the implausible numbers using prespecified thresholds\ldots."
+- Prior work tries to "detect the implausible numbers using prespecified thresholds\ldots." (Think of the 5.9 inch tall person.)
 
 - Domains: conformance, completeness, and plausibility
 
@@ -255,7 +257,7 @@ record data with an application to the VA million veteran program.
 
 
 
-# Correctness
+# Domain: Correctness
 
 ## FIXME
 
