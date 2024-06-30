@@ -374,14 +374,13 @@ of the retina whatsoever.)
 
 ## Reusing EHR data is not what you may think\ldots
 
-- Data are entered in "funny ways."
-    - Well-meaning people enter the wrong number. *Correctness, Plausibility*
-    - People "just click through" because they're so busy. *Correctness*
-    - It's surprisingly hard to "prove" some data right/wrong. *Correctness*
-    - Medical testing is *extremely* non-random! *Completeness*
-- Just because the table is named `procedures` doesn't mean\ldots *Conformance*
-- The data may be "in there" but hard to get. *Conformance*
-- The data may not be "in there" at all (system was not designed for it). *Completeness*
+- **Correctness, Plausibility:** Well-meaning people enter the wrong number.
+- **Correctness:** People "just click through" because they're so busy.
+- **Correctness:** It's surprisingly hard to "prove" some data right/wrong.
+- **Completeness:** Medical testing is *extremely* non-random!
+- **Conformance:** Just because the table is named `procedures` doesn't mean\ldots
+- **Conformance:** The data may be "in there" but hard to get.
+- **Completeness:** The data may not be "in there" at all (system was not designed for it).
 
 \ldots and yet, people manage to use EHR data for research!
 
