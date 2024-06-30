@@ -93,77 +93,51 @@ Many other affiliates.
 
 # Data quality frameworks
 
-## Simple errors (what many people think "data cleaning" is)
+## Examples of entry errors (what many people think "data cleaning" is)
 
 ::: columns
 :::: column
-![28 inches is a plausible length for a 6--13 month-old, not a retired veteran](img/72cm.jpg)
+![28 inches is a plausible length for a 6--13 month-old, not a retired veteran. Happens to be 72 *centimeters!*](img/72cm.jpg)
 ::::
 :::: column
-![Are you sure you want to correct the BMI = 4484?](img/5-9inch.jpg)
+![Are you sure you want to correct the impossible BMI = 4484?](img/5-9inch.jpg)
 ::::
 :::
 
 
-## Data quality frameworks: General references
+## Data quality domains
 
-An early framework[^weis] described five domains of data quality:
-**completeness, correctness, concordance, plausibility, and
-currency.**
-
-There are several reviews of data quality literature.[^lit]
-
-[^lit]: Liaw ST, Guo JGN, Ansari S, *et al.* Quality assessment of real-world data repositories across the data life cycle: A literature review. *J Am Med Inform Assoc.* 2021;28(7):1591--1599. [PMID: 33496785](https://pubmed.ncbi.nlm.nih.gov/33496785/)
-
-[^weis]: Weiskopf NG, Weng C. Methods and dimensions of electronic health record data quality assessment: enabling reuse for clinical research. *J Am Med Inform Assoc.* 2013;20(1):141--151. [PMID: 22733976](https://pubmed.ncbi.nlm.nih.gov/22733976/)
-
-
-## Most recent systematic review
-
-A more recent systematic review[^seven] now describes 7 domains.
+A systematic review that I like[^seven] describes 7 domains.
 However, the authors observe that there is no "standard approach for assessing EHR data quality", so
 "guidelines are needed for EHR data quality assessment\ldots."
 
-- Completeness
-- Correctness
-- Concordance
-- Plausibility
-- Currency
+- **Completeness**
+- **Correctness**
+- **Concordance**
+- **Plausibility**
+- **Currency**
 - Conformance
 - Bias
 
-[^seven]: Lewis AE, Weiskopf N, Abrams ZB, *et al.* Electronic health record data quality assessment and tools: a systematic review. *J Am Med Inform Assoc.* 2023;30(10):1730--1740. [PMID: 37390812](https://pubmed.ncbi.nlm.nih.gov/37390812/)
+Other frameworks[^weis] and reviews[^lit] don't always include the same domains.
 
+[^seven]: Lewis AE, *et al.* Electronic health record data quality assessment and tools: a systematic review. *J Am Med Inform Assoc.* 2023;30(10):1730--1740. [PMID: 37390812](https://pubmed.ncbi.nlm.nih.gov/37390812/)
 
-## More approaches
+[^lit]: Liaw ST, *et al.* *J Am Med Inform Assoc.* 2021;28(7):1591--1599. [PMID: 33496785](https://pubmed.ncbi.nlm.nih.gov/33496785/)
 
-Three categories of data quality described in a 2016 paper:
-conformance, completeness, plausibility.[^kahn] And five categories in
-a 2018 paper: **accuracy,** completeness, **consistency, credibility,
-and timeliness.**[^feder] The latter paper also describes a
-straightforward list of "approaches for quality appraisal:"
-
-- Data validation with data rules
-- Verification of abstraction with statistical measures
-- Data comparisons with manual chart review
-- Management of missing data using statistical methods
-- Data triangulation between multiple EHR databases
-
-[^feder]: Feder SL. Data Quality in Electronic Health Records Research: Quality Domains and Assessment Methods. *West J Nurs Res.* 2018;40(5):753--766. [PMID: 28322657](https://pubmed.ncbi.nlm.nih.gov/28322657/)
-
-[^kahn]: Kahn MG, Callahan TJ, Barnard J, *et al.* A Harmonized Data Quality Assessment Terminology and Framework for the Secondary Use of Electronic Health Record Data. *EGEMS (Wash DC).* 2016;4(1):1244. [PMID: 27713905](https://pubmed.ncbi.nlm.nih.gov/27713905/)
+[^weis]: Weiskopf NG, Weng C. *J Am Med Inform Assoc.* 2013;20(1):141--151. [PMID: 22733976](https://pubmed.ncbi.nlm.nih.gov/22733976/)
 
 
 ## Summary of domains of data quality
 
-Author $\to$      Lewis23    Weis13   Kahn16   Feder18         Wang21
---------          ----       ----     ----     ----            ----
-**Completeness**  +          +        +        +               +
-Correctness       +          +                 +
-Concordance       +          +                 "consistency"
-**Plausibility**  +          +        +        "credibility"   +
-Currency          +          +                 +
-Conformance       +                   +                        +
+Author/yr $\to$   **Lewis23**    Weis13   Kahn16   Feder18         Wang21
+--------          ----           ----     ----     ----            ----
+**Completeness**  +              +        +        +               +
+Correctness       +              +                 +
+Concordance       +              +                 "consistency"
+**Plausibility**  +              +        +        "credibility"   +
+Currency          +              +                 +
+Conformance       +                       +                        +
 Bias              +
 
 **Completeness and plausibility seem to be everyone's favorites!**
@@ -171,7 +145,7 @@ Bias              +
 
 
 
-# Completeness
+# Domain: Completeness
 
 ## One approach (Mini-Sentinel)[^mini]
 
@@ -234,18 +208,18 @@ The patient's ZIP code.                This *individual* patient's income.
 
 
 
-# Conformance and "merging" data
+# Domain: Conformance
 
-## Lab units (Mini-Sentinel): 12 data partners = 67 units!
-
-![](img/platelet.png){height=90%}
-
-
-## Data integration or harmonization: manual or automated[^nate]
+## Data "merging" or harmonization: manual or automated[^nate]
 
 ![](img/nate.png){ height=75% }
 
 [^nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine Learning for Laboratory Data Integration. *Stud Health Technol Inform.* 2019;264:133--137. [PMID: 31437900](https://pubmed.ncbi.nlm.nih.gov/31437900/)
+
+
+## Lab units (Mini-Sentinel): 12 data partners = 67 units!
+
+![](img/platelet.png){height=90%}
 
 
 ## Unexpected data naming: I just wanted to find ER discharge against medical advice\ldots
@@ -257,9 +231,9 @@ The patient's ZIP code.                This *individual* patient's income.
 
 
 
-# Plausibility
+# Domain: Plausibility
 
-## Statistical approach to data quality in Million Veteran Program[^mvp]
+## Statistical approach to data quality in the Million Veteran Program[^mvp]
 
 - Prior work tries to "detect the implausible numbers using prespecified thresholds\ldots."
 
@@ -282,6 +256,11 @@ record data with an application to the VA million veteran program.
 
 
 # Correctness
+
+## FIXME
+
+go down to 1 example (good note, bad note)
+
 
 ## Example 1: Rich text note A
 
@@ -377,12 +356,12 @@ Labeling data is *expensive!* How did Google/Verily train a convolutional neural
 
 ![](img/labeling.png)
 
-- **476,000 to 989,000** retinal imaging reads
+- **476,000 to 989,000** retinal imaging reads. Assume 44 reads / hour.[^ijta]
 
-- Assume[^ijta] 44 reads / hour. 5--11 *working years,* or **\$1.4--2.8
+- That equals 5--11 *working years,* or **\$1.4--2.8
 million!** (Before any computing at all. *Just* to score images for
 "referable" diabetic retinopathy. The AI can assess no other features
-of the retina whatsoever.
+of the retina whatsoever.)
 
 [^ijta]: Kolomeyer AM *et al.* *Int J Telemed Appl.* 2012;2012:806464. [PMID: 23316224](https://pubmed.ncbi.nlm.nih.gov/23316224/)
 
@@ -396,13 +375,13 @@ of the retina whatsoever.
 ## Reusing EHR data is not what you may think\ldots
 
 - Data are entered in "funny ways."
-    - Well-meaning people enter the wrong number.
-    - People "just click through" because they're so busy.
-    - It's surprisingly hard to "prove" some data are wrong.
-    - Medical testing is *extremely* non-random!
-- Just because the table is named `procedures` doesn't mean\ldots
-- The data may be "in there" but hard to get.
-- The data may not be "in there" at all (system was not designed for it).
+    - Well-meaning people enter the wrong number. *Correctness, Plausibility*
+    - People "just click through" because they're so busy. *Correctness*
+    - It's surprisingly hard to "prove" some data right/wrong. *Correctness*
+    - Medical testing is *extremely* non-random! *Completeness*
+- Just because the table is named `procedures` doesn't mean\ldots *Conformance*
+- The data may be "in there" but hard to get. *Conformance*
+- The data may not be "in there" at all (system was not designed for it). *Completeness*
 
 \ldots and yet, people manage to use EHR data for research!
 
