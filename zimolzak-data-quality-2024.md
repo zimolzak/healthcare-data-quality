@@ -388,6 +388,35 @@ of the retina whatsoever.)
 ### If you never tried swimming, don't jump in the deep end without a lifeguard.
 
 
+## FIXME test
+
+-------------------------------------------          --------
+Well-meaning people enter the wrong number.          *Correctness, Plausibility*
+
+People "just click through" because they're          *Correctness*
+so busy.
+
+It's surprisingly hard to "prove" some data          *Correctness*
+right/wrong.
+
+Medical testing is *extremely* non-random!           *Completeness*
+
+Just because the table is named `procedures`         *Conformance*
+ doesn't mean\ldots
+
+The data may be "in there" but hard to get.          *Conformance*
+
+The data may not be "in there" at all                *Completeness*
+(system was not designed for it).
+-------------------------------------------          --------
+
+
+
+
+\ldots and yet, people manage to use EHR data for research!
+
+
+
 ## Thank you!
 
 ### Contact me or review materials:
