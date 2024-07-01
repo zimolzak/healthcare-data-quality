@@ -107,17 +107,17 @@ It's not "throwing away outliers."
 
 ::: columns
 :::: column
-![28 inches is a plausible length for a 6--13 month-old, not a retired veteran. Happens to be 72 *centimeters!*](img/72cm.jpg)
+![28 inches is a **plausible** length for a 6--13 month-old, not a retired veteran. Happens to be 72 *centimeters!*](img/72cm.jpg)
 ::::
 :::: column
-![Are you sure you want to correct the impossible BMI = 4484?](img/5-9inch.jpg)
+![Warning: Are you sure you want to correct the impossible BMI = 4484?](img/5-9inch.jpg)
 ::::
 :::
 
 
 ## Data quality domains
 
-A systematic review that I like[^seven] describes 7 domains. However,
+A systematic review that I like[^lewis] describes **seven domains** of data quality. However,
 the authors observe that there is no "standard approach for assessing
 EHR data quality", so "guidelines are needed for EHR data quality
 assessment\ldots."
@@ -130,7 +130,7 @@ assessment\ldots."
 - Conformance
 - Currency
 
-[^seven]: Lewis AE, *et al.* Electronic health record data quality assessment and tools: a systematic review. *J Am Med Inform Assoc.* 2023;30(10):1730--1740. [PMID: 37390812](https://pubmed.ncbi.nlm.nih.gov/37390812/)
+[^lewis]: Lewis AE, *et al.* Electronic health record data quality assessment and tools: a systematic review. *J Am Med Inform Assoc.* 2023;30(10):1730--1740. [PMID: 37390812](https://pubmed.ncbi.nlm.nih.gov/37390812/)
 
 
 ## Definitions 1--5
@@ -153,7 +153,7 @@ Completeness:
 
 Bias:
 
-: Missingness not at random. (*E.g.,* "sicker patients have higher levels of data completeness."[^seven])
+: Missingness not at random. (*E.g.,* "sicker patients have higher levels of data completeness."[^lewis])
 
 
 ## Definitions 6--7
@@ -164,27 +164,28 @@ Conformance:
 
 Currency:
 
-: The accuracy of the EHR data for the time at which it was recorded and how up to date the data are. "Timeliness."[^seven]
+: The accuracy of the EHR data for the time at which it was recorded and how up to date the data are. "Timeliness."[^lewis]
 
 
 ## Summary of papers discussing domains of data quality
 
-Author/yr. $\to$  **Lewis23**    Weis13   Kahn16   Feder18         Wang21
---------          ----           ----     ----     ----            ----
-**Completeness**  +              +        +        +               +
-Correctness       +              +                 +
-Concordance       +              +                 "consistency"
-**Plausibility**  +              +        +        "credibility"   +
-Currency          +              +                 +
-Conformance       +                       +                        +
-Bias              +
+Author/yr. $\to$    **Lewis23**    Weiskopf13 Kahn16   Feder18         Wang21
+--------            ----           ----       ----     ----            ----
+Correctness         +              +                   +
+\ Concordance       +              +                   "consistency"
+\ **Plausibility**  +              +          +        "credibility"   +
+**Completeness**    +              +          +        +               +
+\ Bias              +
+Conformance         +                         +                        +
+Currency            +              +                   +
 
-**Completeness and plausibility seem to be everyone's favorites** across this table!
+**Completeness and plausibility seem to be everyone's favorites**
+across this table!
 
 
 
 
-# Domain: Completeness
+# Domains: Completeness, Bias
 
 ## When lab tests disappear/reappear (Mini-Sentinel)[^mini]
 
@@ -194,13 +195,14 @@ Bias              +
 ::::
 :::: column
 
-- Number of INR lab tests suddenly dropped $18,000 \to 15,000$ one
-  year. Why? **System started storing as plain text.**
+- Number of INR lab tests suddenly $18,000 \to 15,000$ one
+  year. Why? **The system was storing some results as plain text**
+  (not numbers).
 
 - Then suddenly $18,000 \to 24,000$ a few years later. Why? **Clinic
   started importing data from the hospital.**
 
-- Don't build the data-gathering system and walk away, assuming
+- Lesson: Don't build the data-gathering system and walk away, assuming
   nothing will change.
 
 ::::
@@ -209,13 +211,17 @@ Bias              +
 [^mini]: Raebel MA, Haynes K, Woodworth TS, *et al.* Electronic clinical laboratory test results data tables: lessons from Mini-Sentinel. *Pharmacoepidemiol Drug Saf.* 2014;23(6):609--618. [PMID: 24677577](https://pubmed.ncbi.nlm.nih.gov/24677577/)
 
 
-## Missing data in general
+## Missing data in general (*Completeness* and *Bias*)
 
-- This phenomenon is under-recognized. (Tests get checked for a reason, and more frequently for sick patients.)
+- This phenomenon is under-recognized. People think *missing data* means, "The lab measured the patient's serum sodium, but I can't access the result."
+
+- But *missing* also means "not checked at all." Tests get checked for a reason, and **more frequently for sick patients** (only one example).  My serum sodium exists, but it was not measured on any day in 2024. Large gaps in time $\to$ "Was this an acute or slow change?"
+
 - Potentially massive threat to validity.
-- There is no one right way to handle missing data, but several wrong ways.
-- Detailed methods are out of scope for this talk.
-- "Patient goes out of network" is another form of it (also sometimes under-appreciated).
+
+- There is no one right way to handle missing data, but several wrong ways. Detailed methods are out of scope for this talk. Observational data are tricky. Epidemiology and statistics professionals are there for a reason.
+
+**EHR data do not tell the whole story!**
 
 
 ## When data aren't in the medical record at all
@@ -226,6 +232,7 @@ A medicine was prescribed.             Did the patient fill the prescription?
 The patient filled the prescription.   How many days did the patient miss?
 The patient's ZIP code.                This *individual* patient's income.
 
+![Real prescription fills. What happens during those gaps?](img/statinFills.png){height=50%}
 
 
 
