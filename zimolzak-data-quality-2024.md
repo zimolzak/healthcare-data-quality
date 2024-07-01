@@ -141,10 +141,8 @@ EHR data is **not the only way to do your Inquiry project!** Leave adequate time
 ## Data quality domains
 
 EHR data quality assessment is much more than "fixing/excluding
-obvious errors."
-
-A systematic review that I like describes **seven domains** of data
-quality.[^lewis]
+obvious errors." A systematic review that I like describes **seven
+domains** of data quality.[^Lewis]
 
 - Correctness
     - Concordance
@@ -158,7 +156,7 @@ However, the authors observe that there is no "standard approach for
 assessing EHR data quality", so "guidelines are needed for EHR data
 quality assessment\ldots."
 
-[^lewis]: Lewis AE, *et al.* Electronic health record data quality assessment and tools: a systematic review. *J Am Med Inform Assoc.* 2023;30(10):1730--1740. [PMID: 37390812](https://pubmed.ncbi.nlm.nih.gov/37390812/)
+[^Lewis]: Lewis AE, *et al.* Electronic health record data quality assessment and tools: a systematic review. *J Am Med Inform Assoc.* 2023;30(10):1730--1740. [PMID: 37390812](https://pubmed.ncbi.nlm.nih.gov/37390812/)
 
 
 ## Definitions 1--5
@@ -181,7 +179,7 @@ Completeness:
 
 Bias:
 
-: Missingness not at random. (*E.g.,* "sicker patients have higher levels of data completeness."[^lewis])
+: Missingness not at random. (*E.g.,* "sicker patients have higher levels of data completeness."[^Lewis])
 
 
 ## Definitions 6--7
@@ -192,7 +190,7 @@ Conformance:
 
 Currency:
 
-: The accuracy of the EHR data for the time at which it was recorded and how up to date the data are. "Timeliness."[^lewis]
+: The accuracy of the EHR data for the time at which it was recorded and how up to date the data are. "Timeliness."[^Lewis]
 
 
 ## Summary of papers discussing domains of data quality
@@ -289,11 +287,11 @@ LOINC is a code that is supposed to take care of this, but\ldots
 ![](img/platelet.png){height=90%}
 
 
-## Data "merging" or harmonization: manual or automated[^nate]
+## Data "merging" or harmonization: manual or automated[^Nate]
 
 ![](img/nate.png){ height=75% }
 
-[^nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine Learning for Laboratory Data Integration. *Stud Health Technol Inform.* 2019;264:133--137. [PMID: 31437900](https://pubmed.ncbi.nlm.nih.gov/31437900/)
+[^Nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine Learning for Laboratory Data Integration. *Stud Health Technol Inform.* 2019;264:133--137. [PMID: 31437900](https://pubmed.ncbi.nlm.nih.gov/31437900/)
 
 
 ## Unexpected data naming: I just wanted to find ER discharge against medical advice\ldots
@@ -307,7 +305,7 @@ LOINC is a code that is supposed to take care of this, but\ldots
 
 # Domain: Plausibility
 
-## Statistical approach to data quality in the Million Veteran Program[^mvp]
+## Statistical approach to data quality in the Million Veteran Program[^MVP]
 
 - Prior work tries to "detect the implausible numbers using prespecified thresholds\ldots." (Think of the 5.9 inch tall person.)
 
@@ -321,7 +319,7 @@ LOINC is a code that is supposed to take care of this, but\ldots
   positive and negative predictive value, compared to the "population
   threshold" approach.
 
-[^mvp]: Wang H, Belitskaya-Levy I, Wu F, *et al.* A statistical quality
+[^MVP]: Wang H, Belitskaya-Levy I, Wu F, *et al.* A statistical quality
 assessment method for longitudinal observations in electronic health
 record data with an application to the VA million veteran program.
 *BMC Med Inform Decis Mak.* 2021;21(1):289. [PMID: 34670548](https://pubmed.ncbi.nlm.nih.gov/34670548/)
@@ -360,31 +358,31 @@ information, just like "structured" data.
 - Not typos but transcription (or other) errors, nearly undetectable to the untrained: "Intrathecal DepoCyt" $\to$ "Intrathecal etoposide"
 
 
-## Automated information extraction from text[^ryu]
+## Automated information extraction from text[^Ryu]
 
 **Rules-based and machine learning approaches work!** But the problem was selected carefully. (Don't bite off more than you can chew.)
 
 ![](img/ryu.jpg){ height=60% }
 
-[^ryu]: Ryu JH, Zimolzak AJ. Natural Language Processing of Serum Protein Electrophoresis Reports in the Veterans Affairs Health Care System. *JCO Clin Cancer Inform.* 2020;4:749--756. [PMID: 32813561](https://pubmed.ncbi.nlm.nih.gov/32813561/)
+[^Ryu]: Ryu JH, Zimolzak AJ. Natural Language Processing of Serum Protein Electrophoresis Reports in the Veterans Affairs Health Care System. *JCO Clin Cancer Inform.* 2020;4:749--756. [PMID: 32813561](https://pubmed.ncbi.nlm.nih.gov/32813561/)
 
 
 ## Machine learning: harder than people think
 
-Labeling data is *expensive!* How did Google/Verily train a convolutional neural net to interpret retinal fundus photographs?[^gulshan]
+Labeling data is *expensive!* How did Google/Verily train a convolutional neural net to interpret retinal fundus photographs?[^Gulshan]
 
 ![](img/labeling.png)
 
-- **476,000 to 989,000** retinal imaging reads. Assume 44 reads / hour.[^ijta]
+- **476,000 to 989,000** retinal imaging reads. Assume 44 reads / hour.[^rate]
 
 - That equals 5--11 *working years,* or **\$1.4--2.8
 million!** (Before any computing at all. The AI is *just* to score images for
 "referable" diabetic retinopathy. It can assess no other features
 of the retina whatsoever.)
 
-[^ijta]: Kolomeyer AM *et al.* *Int J Telemed Appl.* 2012;2012:806464. [PMID: 23316224](https://pubmed.ncbi.nlm.nih.gov/23316224/)
+[^rate]: Kolomeyer AM *et al.* *Int J Telemed Appl.* 2012;2012:806464. [PMID: 23316224](https://pubmed.ncbi.nlm.nih.gov/23316224/)
 
-[^gulshan]: Gulshan V, *et al.* *JAMA.* 2016;316(22):2402--2410. [PMID: 27898976](https://pubmed.ncbi.nlm.nih.gov/27898976/)
+[^Gulshan]: Gulshan V, *et al.* *JAMA.* 2016;316(22):2402--2410. [PMID: 27898976](https://pubmed.ncbi.nlm.nih.gov/27898976/)
 
 
 
