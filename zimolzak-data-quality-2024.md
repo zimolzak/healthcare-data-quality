@@ -117,17 +117,18 @@ It's not "throwing away outliers."
 
 ## Data quality domains
 
-A systematic review that I like[^seven] describes 7 domains.
-However, the authors observe that there is no "standard approach for assessing EHR data quality", so
-"guidelines are needed for EHR data quality assessment\ldots."
+A systematic review that I like[^seven] describes 7 domains. However,
+the authors observe that there is no "standard approach for assessing
+EHR data quality", so "guidelines are needed for EHR data quality
+assessment\ldots."
 
-- **Completeness**
-- **Correctness**
-- **Concordance**
-- **Plausibility**
-- **Currency**
+- Correctness
+    - Concordance
+    - Plausibility
+- Completeness
+    - Bias
 - Conformance
-- Bias
+- Currency
 
 Other frameworks[^weis] and reviews[^lit] may not include the same exact domains.
 
@@ -138,9 +139,43 @@ Other frameworks[^weis] and reviews[^lit] may not include the same exact domains
 [^weis]: Weiskopf NG, Weng C. *J Am Med Inform Assoc.* 2013;20(1):141--151. [PMID: 22733976](https://pubmed.ncbi.nlm.nih.gov/22733976/)
 
 
-## Summary of domains of data quality
+## Definitions 1--5
 
-Author/yr $\to$   **Lewis23**    Weis13   Kahn16   Feder18         Wang21
+Correctness:
+
+: The truthfulness of data in the EHR. (Also: accuracy, validity.)
+
+Concordance:
+
+: The agreement between elements within the EHR and between the EHR and other data sources. (Also: consistency, agreement.)
+
+Plausibility:
+
+: The extent to which EHR data make sense in a larger medical context. (Believable "in light of other knowledge" or possible "without asserting the correctness of the value.")
+
+Completeness:
+
+: The presence of data in the EHR. (Also: missingness, presence, availability.)
+
+Bias:
+
+: Missingness not at random. (*E.g.,* "sicker patients have higher levels of data completeness."[^seven])
+
+
+## Definitions 6--7
+
+Conformance:
+
+: Compliance with a predefined representational structure. (Agreement with "predefined structure, value, or format" and depends "on the usage of a correct data type and unit if necessary.")
+
+Currency:
+
+: The accuracy of the EHR data for the time at which it was recorded and how up to date the data are. "Timeliness."[^seven]
+
+
+## Summary of papers discussing domains of data quality
+
+Author/yr. $\to$  **Lewis23**    Weis13   Kahn16   Feder18         Wang21
 --------          ----           ----     ----     ----            ----
 **Completeness**  +              +        +        +               +
 Correctness       +              +                 +
