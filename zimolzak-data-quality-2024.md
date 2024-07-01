@@ -52,7 +52,7 @@ Springer; 2016. [**Click here** for free access!](https://link.springer.com/book
 
 ## Layers of data quality (where things can go wrong)
 
-From "little picture" to big picture:
+My informal classification scheme, arranged from "little picture" to big picture:
 
 1. Data itself (contents) is flawed
     - occasional errors, typos, misunderstandings, *etc.*
@@ -103,7 +103,7 @@ It's not "throwing away outliers."
 
 # Data quality frameworks
 
-## Examples of entry errors (what many people think "data cleaning" is)
+## Examples of simple entry errors (what many people think "data cleaning" is)
 
 ::: columns
 :::: column
@@ -117,10 +117,11 @@ It's not "throwing away outliers."
 
 ## Data quality domains
 
+EHR data quality assessment is much more than "fixing/excluding
+obvious errors."
+
 A systematic review that I like describes **seven domains** of data
-quality.[^lewis] However, the authors observe that there is no
-"standard approach for assessing EHR data quality", so "guidelines are
-needed for EHR data quality assessment\ldots."
+quality.[^lewis]
 
 - Correctness
     - Concordance
@@ -129,6 +130,10 @@ needed for EHR data quality assessment\ldots."
     - Bias
 - Conformance
 - Currency
+
+However, the authors observe that there is no "standard approach for
+assessing EHR data quality", so "guidelines are needed for EHR data
+quality assessment\ldots."
 
 [^lewis]: Lewis AE, *et al.* Electronic health record data quality assessment and tools: a systematic review. *J Am Med Inform Assoc.* 2023;30(10):1730--1740. [PMID: 37390812](https://pubmed.ncbi.nlm.nih.gov/37390812/)
 
@@ -202,8 +207,8 @@ across this table!
 - Then suddenly $18,000 \to 24,000$ a few years later. Why? **Clinic
   started importing data from the hospital.**
 
-- Lesson: Don't build the data-gathering system and walk away, assuming
-  nothing will change.
+- Lesson: Don't build the data-gathering system, assume that nothing
+will change, and walk away forever.
 
 ::::
 :::
@@ -211,11 +216,11 @@ across this table!
 [^mini]: Raebel MA, Haynes K, Woodworth TS, *et al.* Electronic clinical laboratory test results data tables: lessons from Mini-Sentinel. *Pharmacoepidemiol Drug Saf.* 2014;23(6):609--618. [PMID: 24677577](https://pubmed.ncbi.nlm.nih.gov/24677577/)
 
 
-## Missing data in general (*Completeness* and *Bias*)
+## Missing data in general: Bias
 
 - This phenomenon is under-recognized. People think *missing data* means, "The lab measured the patient's serum sodium, but I can't access the result."
 
-- But *missing* also means "not checked at all." Tests get checked for a reason, and **more frequently for sick patients** (only one example).  My serum sodium exists, but it was not measured on any day in 2024. Large gaps in time $\to$ "Was this an acute or slow change?"
+- But *missing* also means "not checked at all." One example: Tests get checked for a reason, and **more frequently for sick patients.**  My serum sodium exists, but it was not measured on any day in 2024. Large gaps in time $\to$ "Was this an acute or slow change?"
 
 - Potentially massive threat to validity.
 
@@ -334,7 +339,7 @@ information, just like "structured" data.
 
 ## Automated information extraction from text[^ryu]
 
-**Rules-based and machine learning approaches work!** But the problem was selected carefully.
+**Rules-based and machine learning approaches work!** But the problem was selected carefully. (Don't bite off more than you can chew.)
 
 ![](img/ryu.jpg){ height=60% }
 
@@ -350,8 +355,8 @@ Labeling data is *expensive!* How did Google/Verily train a convolutional neural
 - **476,000 to 989,000** retinal imaging reads. Assume 44 reads / hour.[^ijta]
 
 - That equals 5--11 *working years,* or **\$1.4--2.8
-million!** (Before any computing at all. *Just* to score images for
-"referable" diabetic retinopathy. The AI can assess no other features
+million!** (Before any computing at all. The AI is *just* to score images for
+"referable" diabetic retinopathy. It can assess no other features
 of the retina whatsoever.)
 
 [^ijta]: Kolomeyer AM *et al.* *Int J Telemed Appl.* 2012;2012:806464. [PMID: 23316224](https://pubmed.ncbi.nlm.nih.gov/23316224/)
@@ -365,12 +370,6 @@ of the retina whatsoever.)
 
 ## Reusing EHR data is not what you may think\ldots
 
-### Correctness
-
-- Well-meaning people enter the wrong number. (Plausibility, too)
-- People "just click through" because they're so busy.
-- It's surprisingly hard to "prove" some data right/wrong.
-
 ### Completeness
 
 - Medical testing is *extremely* non-random!
@@ -381,9 +380,15 @@ of the retina whatsoever.)
 - Just because the table is named `DischargeType` doesn't mean\ldots
 - The data may be "in there" but hard to get.
 
+### Correctness
+
+- Well-meaning people enter the wrong number. (Plausibility, too)
+- People "just click through" because they're so busy.
+- It's surprisingly hard to "prove" some data right/wrong.
+
 ### And yet\ldots
 
-People manage to use EHR data for research! **If you never tried swimming, don't jump in the deep end without a lifeguard.**
+People still manage to use EHR data productively for research! **If you never tried swimming, don't jump in the deep end without a lifeguard.**
 
 
 ## Thank you!
