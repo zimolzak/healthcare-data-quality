@@ -80,23 +80,46 @@ It's not "throwing away outliers."
 
 # Data at BCM
 
-## Overview
+## Internal BCM data
 
-### Baylor Medicine
+EHR data is **not the only way to do your Inquiry project!** Leave adequate time if requesting new data "from scratch," or match with a faculty investigator and get added to their protocol.
 
-- FIXME
+**it.bcm.edu** $\to$ sign in $\to$ Request a Service $\to$ Data/Reporting
 
-### Baylor St.\ Luke's
+### Baylor Medicine (formerly Baylor Clinic)
 
-- FIXME
+- *Outpatients,* including primary care, subspecialties (a few exceptions)
+- Epic EHR system, starting 2009-02-01
+- $\sim$ 4.6 million patients
+- Working on a standard de-identified subset for students, researchers
+
+### i2b2
+
+- Quick access to numbers of patients, for feasibility (no identifiers)
+- Access is through BCM IT
+
+
+## External data (more or less)
 
 ### Epic Cosmos
 
-- FIXME
+- 214 million individuals (and growing)
+- Hundreds/thousands of Epic organizations in the US contribute data
+- Request access through BCM IT, but limited user "slots"
 
-### Many other affiliates.
+### Baylor St.\ Luke's Medical Center
 
-- FIXME
+- *Inpatients*
+- Part of larger health network CommonSpirit
+- They are "on Epic," but it's not the same Epic as Baylor Medicine.
+- BCM IT *can* address data needs but don't "own" the data
+
+### Many other affiliates (data access processes vary a lot)
+
+- Baylor Scott & White Medical Center - Temple
+- Harris Health (Ben Taub, LBJ): also Epic (#3)
+- Veterans Affairs (Houston, Temple, 100+ others)
+- Texas Children's Hospital: also Epic (#4)
 
 
 
