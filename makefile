@@ -1,6 +1,6 @@
 .PHONY: all clean
 
-files = zimolzak-data-quality-2024.pdf zimolzak-data-quality-2024.pptx
+files = zimolzak-data-quality-2024.pdf
 
 images = img/5-9inch.jpg img/72cm.jpg img/book.jpg img/discharge1.png
 images += img/discharge2.png img/discharge3.png img/inr-down-up.jpg
