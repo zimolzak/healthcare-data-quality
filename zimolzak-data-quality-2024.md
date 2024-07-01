@@ -283,13 +283,13 @@ LOINC is a code that is supposed to take care of this, but\ldots
 
 - Prior work tries to "detect the implausible numbers using prespecified thresholds\ldots." (Think of the 5.9 inch tall person.)
 
-- Domains: conformance, completeness, and plausibility
+- This paper addressed 3 domains: conformance, completeness, and plausibility.
 
 - Improved plausibility score by testing **height and weight
   correlation with past values for that patient.** Exponentially
   weighted moving average.
 
-- This approach had fewer false positives, higher power, higher
+- This approach had fewer false positives, higher power, and higher
   positive and negative predictive value, compared to the "population
   threshold" approach.
 
@@ -308,7 +308,7 @@ record data with an application to the VA million veteran program.
 ![](img/richtext-simulated.png){ height=90% }
 
 
-## How you receive the note (almost no separators!)
+## How you receive the note (formatting irretrievably lost)
 
 `Discharge Physician: Ramirez, MD Discharge Diagnosis: 1. Chest pain, resolved 2. Hypotension, resolved 3. ESRD on HD Patient Active Problem List Diagnosis Date Noted • Respiratory insufficiency 06/2024 • Septic shock (HCC) 06/2024 • Community acquired bacterial pneumonia 06/2024 Flowsheet Rows Flowsheet Row Most Recent Value Malnutrition Evaluation Does not meet criteria for protein-calorie malnutrition Discharge Vitals: Vitals: 06/2024 BP: Pulse: 100 Resp: 18 Temp: SpO2: 99% Discharge Labs: Lab Results Component Value Date WBC 6.0 06/2024 HGB 8.8 (L) 06/2024 HCT 25.4 (L) 06/2024 MCV 92 06/2024 PLT 181 06/2024 Lab Results Component Value Date GLUCOSE 85 06/2024 CALCIUM 9.8 06/2024 NA 133 (L) 06/2024 K 4.0 06/2024 CO2 23 06/2024 CL 95 (L) 06/2024 BUN 54 (H) 06/2024 CREATININE 13.0 (H) 06/2024 Discharged Condition: fair Consults: Treatment Team: Consulting Physician: Swift, MD Consulting Physician: Seagraves, MD`
 
