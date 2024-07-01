@@ -9,7 +9,7 @@
 
 Data "cleaning" is (choose **all** that apply):
 
-A. usually not appropriate to pursue, because the "raw" data is the most faithful to the true clincal situation.
+A. usually not appropriate to pursue, because the "raw" data is the most faithful to the true clinical situation.
 
 B. straightforward, because it can always be compared to an external, gold standard source of truth.
 
@@ -80,7 +80,7 @@ D. The number of sodium labs in the database per year appears to drop by 30% bec
 
 A. The lab data from New Orleans were collected but are missing from the point of view of a researcher or clinician at BCM. They cannot easily determine what was/wasn't measured. This is a problem with completeness.
 
-B. This social determinant of health is unfortunately not in the EHR in this example. The researcher will have to find another source for this data or investigate a different associateion. This is another form of data (in)completeness.
+B. This social determinant of health is unfortunately not in the EHR in this example. The researcher will have to find another source for this data or investigate a different association. This is another form of data (in)completeness.
 
 C. This is not a problem with data completeness, but with conformance. The data are all present, and the problem is not missing values, but inconsistent naming. This is the best response.
 
