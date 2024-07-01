@@ -110,17 +110,17 @@ It's not "throwing away outliers."
 ![28 inches is a **plausible** length for a 6--13 month-old, not a retired veteran. Happens to be 72 *centimeters!*](img/72cm.jpg)
 ::::
 :::: column
-![Warning: Are you sure you want to correct the impossible BMI = 4484?](img/5-9inch.jpg)
+![Warning: Are you sure you want to correct the obviously wrong BMI of 4484?](img/5-9inch.jpg)
 ::::
 :::
 
 
 ## Data quality domains
 
-A systematic review that I like[^lewis] describes **seven domains** of data quality. However,
-the authors observe that there is no "standard approach for assessing
-EHR data quality", so "guidelines are needed for EHR data quality
-assessment\ldots."
+A systematic review that I like describes **seven domains** of data
+quality.[^lewis] However, the authors observe that there is no
+"standard approach for assessing EHR data quality", so "guidelines are
+needed for EHR data quality assessment\ldots."
 
 - Correctness
     - Concordance
@@ -232,7 +232,7 @@ A medicine was prescribed.             Did the patient fill the prescription?
 The patient filled the prescription.   How many days did the patient miss?
 The patient's ZIP code.                This *individual* patient's income.
 
-![Real prescription fills. What happens during those gaps?](img/statinFills.png){height=50%}
+![Real prescription fills of 20 patients. What happens during those gaps?](img/statinFills.png){height=50%}
 
 
 
