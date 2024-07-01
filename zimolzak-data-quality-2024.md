@@ -130,13 +130,7 @@ assessment\ldots."
 - Conformance
 - Currency
 
-Other frameworks[^weis] and reviews[^lit] may not include the same exact domains.
-
 [^seven]: Lewis AE, *et al.* Electronic health record data quality assessment and tools: a systematic review. *J Am Med Inform Assoc.* 2023;30(10):1730--1740. [PMID: 37390812](https://pubmed.ncbi.nlm.nih.gov/37390812/)
-
-[^lit]: Liaw ST, *et al.* *J Am Med Inform Assoc.* 2021;28(7):1591--1599. [PMID: 33496785](https://pubmed.ncbi.nlm.nih.gov/33496785/)
-
-[^weis]: Weiskopf NG, Weng C. *J Am Med Inform Assoc.* 2013;20(1):141--151. [PMID: 22733976](https://pubmed.ncbi.nlm.nih.gov/22733976/)
 
 
 ## Definitions 1--5
