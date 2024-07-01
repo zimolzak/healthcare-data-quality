@@ -1,6 +1,15 @@
-% Inquiry/FASTR Questions
+% Inquiry/FASTR Questions (Electronic Health Record Data Quality)
 % Andrew Zimolzak, MD, MMSc
-% 2024
+% July, 2024
+
+
+Objectives:
+
+1. Identify existing data sources, available through Baylor
+Information Technology, that can be used for research or quality
+improvement, and identify methods to access the data.
+
+2. Understand the general processes used to appraise data quality.
 
 
 
