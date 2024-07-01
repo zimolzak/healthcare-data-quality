@@ -1,3 +1,14 @@
+# Misc
+
+for Q 1 other untrue statements:
+
+- data cleaning is a one time thing
+- data cleaning means one thing to all people
+
+
+
+
+
 ## $3 \times 3$ Matrix[^three]
 
 FIXME insert image
