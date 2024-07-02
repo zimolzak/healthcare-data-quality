@@ -309,4 +309,4 @@ People still manage to use EHR data productively for research! **If you never tr
 
 - This work © 2024 by Andrew Zimolzak is licensed under CC BY-NC-SA 4.0. [Click for license details.](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-- Cite using [doi:10.5281/zenodo.11393189](https://zenodo.org/records/11393189)
+- Cite using [doi:10.5281/zenodo.11393188](https://zenodo.org/records/11393188)

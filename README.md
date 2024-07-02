@@ -1,6 +1,6 @@
 # Electronic Health Record Data Quality
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11393189.svg)](https://doi.org/10.5281/zenodo.11393189)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11393188.svg)](https://doi.org/10.5281/zenodo.11393188)
 
 Andrew Zimolzak, MD, MMSc
 
