@@ -1,3 +1,5 @@
+- Zenodo top right dropdown, click github
+- may have to click "sync" on the zenodo gitub
 - flip switch on the repo, on zenodo website.
 - create release on github (pdf is binary), link release to existing 'v1.0' etc tag.
 - wait a bit, click on repo name on zenodo to watch progress.
